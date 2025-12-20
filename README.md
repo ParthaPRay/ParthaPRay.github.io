@@ -56,18 +56,18 @@ This website is primarily intended for:
 The website is built using **static HTML and CSS**, ensuring simplicity, transparency,
 and ease of long-term maintenance.
 
-index.html — Home / Academic Profile
-research.html — Research areas and outputs
-publications.html — Publications (linked to Google Scholar)
-teaching.html — Teaching experience & courses taught
-service.html — Academic & professional service
-membership.html — Professional memberships
-awards.html — Awards, fellowships & recognitions
-cv.html — Embedded Curriculum Vitae (PDF)
-contact.html — Contact information
-assets/ — CV and academic documents
-css/ — Stylesheets
-images/ — Profile image
+- index.html — Home / Academic Profile
+- publications.html — Publications (linked to Google Scholar)
+- books.html — Books published
+- teaching.html — Teaching experience & courses taught
+- service.html — Academic & professional service
+- membership.html — Professional memberships
+- awards.html — Awards, fellowships & recognitions
+- cv.html — Embedded Curriculum Vitae (PDF)
+- contact.html — Contact information
+- assets/ — CV and academic documents
+- css/ — Stylesheets
+- images/ — Profile image
 
 
 
