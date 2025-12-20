@@ -1,43 +1,156 @@
 # 🎓 Partha Pratim Ray — Academic Website
 
-Welcome to the official **academic research website repository** of  
+Welcome to the official **academic website repository** of  
+
 **Mr. Partha Pratim Ray**  
-*Assistant Professor | Academic Researcher | Edge AI & IoT*
+*Assistant Professor (Senior Scale) | Academic Researcher*  
+*Edge AI • Internet of Things • Generative AI*
 
 🌐 **Live Website:**  
 👉 https://parthapray.github.io
 
 ---
 
-## ✨ About This Website
+## 🌟 Overview
 
-This repository hosts my **personal academic profile website**, designed to serve as a
-**single, authoritative online presence** for my teaching, research, and professional activities.
+This repository hosts my **personal academic website**, created to serve as a  
+**single, authoritative, and publicly accessible academic profile**.
 
-The website is intended for:
-- Academic collaborators
-- Journal editors and reviewers
-- Grant agencies
-- Students and researchers
-- Institutional and faculty evaluation committees
+The website consolidates my academic activities across:
+- Teaching and academic appointments
+- Research and publications
+- Editorial and professional service
+- Awards, recognitions, and fellowships
+- Professional memberships and affiliations
+
+The design philosophy is **minimal, professional, and long-term stable**, aligned with
+widely accepted academic web standards.
 
 ---
 
-## 🔍 What You’ll Find Here
+## 🎯 Intended Audience
 
-✔ Academic biography and affiliation  
-✔ Research interests and ongoing work  
-✔ Publications (journals, conferences, books)  
-✔ Teaching experience and courses taught  
-✔ Editorial and professional service  
-✔ Awards, recognitions, and fellowships  
+This website is primarily intended for:
+
+- 🎓 Academic collaborators and research partners  
+- 📖 Journal editors, reviewers, and publishers  
+- 🧪 Grant and funding agencies  
+- 👩‍🎓 Students and early-career researchers  
+- 🏛️ Institutional evaluation and promotion committees  
+
+---
+
+## 🔍 Key Features
+
+✔ Faculty-grade academic presentation  
+✔ Search-engine friendly structure  
+✔ Fully static (HTML + CSS only)  
+✔ Hosted reliably on GitHub Pages  
+✔ Version-controlled academic content  
 ✔ Embedded and downloadable CV (PDF)  
-✔ Contact details and scholarly profiles  
 
 ---
 
 ## 🧭 Website Structure
 
-The site is hosted using **GitHub Pages** and built entirely with **static HTML + CSS**
-for long-term reliability and simplicity.
+The website is built using **static HTML and CSS**, ensuring simplicity, transparency,
+and ease of long-term maintenance.
 
+index.html — Home / Academic Profile
+research.html — Research areas and outputs
+publications.html — Publications (linked to Google Scholar)
+teaching.html — Teaching experience & courses taught
+service.html — Academic & professional service
+membership.html — Professional memberships
+awards.html — Awards, fellowships & recognitions
+cv.html — Embedded Curriculum Vitae (PDF)
+contact.html — Contact information
+assets/ — CV and academic documents
+css/ — Stylesheets
+images/ — Profile image
+
+
+
+---
+
+## 🛠️ Technology & Hosting
+
+- 🌐 Static HTML5 & CSS3
+- 🚀 Hosted on **GitHub Pages**
+- 🔐 No external frameworks, scripts, or trackers
+- ♻️ Fully version-controlled
+
+### Benefits
+
+- Fast loading and high availability  
+- Zero hosting cost  
+- Easy maintenance  
+- Academic transparency and reproducibility  
+
+---
+
+## 📄 Curriculum Vitae
+
+The Curriculum Vitae is:
+
+- ✍️ Maintained in **LaTeX**
+- 📄 Published as a **PDF**
+- 🔗 Embedded directly into the website
+- ♻️ Version-controlled for consistency and transparency
+
+📎 **View CV:**  
+👉 https://parthapray.github.io/cv.html
+
+---
+
+## 🔗 Scholarly Profiles
+
+The website links to verified scholarly profiles, including:
+
+- Google Scholar
+- ORCID
+- Scopus Author ID
+- GitHub
+
+These profiles provide citation metrics, publication lists, and research visibility.
+
+---
+
+## 📫 Contact Me
+
+For academic correspondence, collaboration, or professional communication:
+
+📧 **Personal Email:**  
+parthapratimray1986@gmail.com  
+
+📧 **Institutional Email:**  
+ppray@cus.ac.in  
+
+Please use email for formal academic communication.
+
+---
+
+## 📌 Maintenance Notes
+
+- This repository is **not a software project**
+- It is maintained exclusively as an **academic profile website**
+- Content is updated periodically to reflect:
+  - New publications
+  - Editorial appointments
+  - Awards and recognitions
+  - Teaching activities
+
+---
+
+## 📖 Citation (Optional)
+
+If you wish to cite this website:
+
+> Partha Pratim Ray. *Academic Website*.  
+> https://parthapray.github.io
+
+---
+
+© **Partha Pratim Ray**  
+🔗 Hosted on GitHub Pages  
+📘 Intended for academic and non-commercial use only
