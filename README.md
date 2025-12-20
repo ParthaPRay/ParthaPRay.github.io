@@ -105,15 +105,24 @@ The Curriculum Vitae is:
 
 ## 🔗 Scholarly Profiles
 
-The website links to verified scholarly profiles, including:
+The website links to verified scholarly profiles for citation metrics, publication lists,
+and research visibility:
 
-- Google Scholar
-- ORCID
-- Scopus Author ID
-- GitHub
+- **Google Scholar:**  
+  https://scholar.google.co.in/citations?user=ioplfagAAAAJ&hl=en&oi=ao
 
-These profiles provide citation metrics, publication lists, and research visibility.
+- **ORCID:**  
+  http://orcid.org/0000-0003-2306-2792
 
+- **Scopus Author ID:**  
+  https://www.scopus.com/authid/detail.uri?authorId=56577228400
+
+- **GitHub:**  
+  https://github.com/ParthaPRay
+
+- **LinkedIn:**  
+  https://www.linkedin.com/in/partha-pratim-ray-9a6491216/
+  
 ---
 
 ## 📫 Contact Me
