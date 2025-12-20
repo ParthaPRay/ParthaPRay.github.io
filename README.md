@@ -57,13 +57,16 @@ The website is built using **static HTML and CSS**, ensuring simplicity, transpa
 and ease of long-term maintenance.
 
 - index.html — Home / Academic Profile
+- education.html — Education and trainings
 - publications.html — Publications (linked to Google Scholar)
 - books.html — Books published
-- service.html — Academic & professional service
 - teaching.html — Teaching experience & courses taught
-- membership.html — Professional memberships
-- awards.html — Awards, fellowships & recognitions
 - mentorship.html — Mentorship to bachelors, masters students
+- service.html — Academic & professional service
+- membership.html — Professional memberships
+- talks.html — Talks delivered
+- projects.html — Funded projects
+- awards.html — Awards, fellowships & recognitions
 - cv.html — Embedded Curriculum Vitae (PDF)
 - contact.html — Contact information
 - assets/ — CV and academic documents
