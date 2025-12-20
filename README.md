@@ -1,31 +1,43 @@
-# Partha Pratim Ray — Academic Website
+# 🎓 Partha Pratim Ray — Academic Website
 
-This repository hosts the **personal academic research website** of  
-**Partha Pratim Ray**, Assistant Professor and Academic Researcher.
+Welcome to the official **academic research website repository** of  
+**Mr. Partha Pratim Ray**  
+*Assistant Professor | Academic Researcher | Edge AI & IoT*
 
-🌐 **Website URL:**  
-https://parthapray.github.io
-
----
-
-## About the Website
-
-This website serves as a central, publicly accessible academic profile and includes:
-
-- Brief academic biography
-- Research interests and outputs
-- Publications and scholarly activities
-- Teaching experience and academic appointments
-- Professional and editorial service
-- Embedded Curriculum Vitae (PDF)
-- Contact and professional profile links
-
-The site is designed to be **minimal, professional, and long-term stable**, following
-widely accepted academic web standards.
+🌐 **Live Website:**  
+👉 https://parthapray.github.io
 
 ---
 
-## Structure
+## ✨ About This Website
 
-The website is hosted using **GitHub Pages** and consists of static HTML files:
+This repository hosts my **personal academic profile website**, designed to serve as a
+**single, authoritative online presence** for my teaching, research, and professional activities.
+
+The website is intended for:
+- Academic collaborators
+- Journal editors and reviewers
+- Grant agencies
+- Students and researchers
+- Institutional and faculty evaluation committees
+
+---
+
+## 🔍 What You’ll Find Here
+
+✔ Academic biography and affiliation  
+✔ Research interests and ongoing work  
+✔ Publications (journals, conferences, books)  
+✔ Teaching experience and courses taught  
+✔ Editorial and professional service  
+✔ Awards, recognitions, and fellowships  
+✔ Embedded and downloadable CV (PDF)  
+✔ Contact details and scholarly profiles  
+
+---
+
+## 🧭 Website Structure
+
+The site is hosted using **GitHub Pages** and built entirely with **static HTML + CSS**
+for long-term reliability and simplicity.
 
