@@ -59,10 +59,11 @@ and ease of long-term maintenance.
 - index.html — Home / Academic Profile
 - publications.html — Publications (linked to Google Scholar)
 - books.html — Books published
-- teaching.html — Teaching experience & courses taught
 - service.html — Academic & professional service
+- teaching.html — Teaching experience & courses taught
 - membership.html — Professional memberships
 - awards.html — Awards, fellowships & recognitions
+- mentorship.html — Mentorship to bachelors, masters students
 - cv.html — Embedded Curriculum Vitae (PDF)
 - contact.html — Contact information
 - assets/ — CV and academic documents
