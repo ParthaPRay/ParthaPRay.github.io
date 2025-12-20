@@ -62,3 +62,43 @@ footer {
   text-align: center;
   font-size: 0.9em;
 }
+
+/* Highlight & blinking announcement styles */
+.highlight-box {
+  border-left: 5px solid #b30000;
+  background: #fdf2f2;
+  padding: 15px 20px;
+  margin: 20px 0;
+}
+
+.blink {
+  color: #b30000;
+  font-weight: bold;
+  animation: blink-animation 1.2s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.announcement {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.announcement:last-child {
+  border-bottom: none;
+}
+
+.badge-new {
+  background: #b30000;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 6px;
+}
+
