@@ -3,8 +3,8 @@
 Welcome to the official **academic website repository** of  
 
 **Mr. Partha Pratim Ray**  
-*Assistant Professor (Senior Scale) | Academic Researcher*  
-*Edge AI • Internet of Things • Generative AI*
+*Assistant Professor (Stage 2) | Academic Researcher*  
+*Edge AI • Internet of Things • Generative AI • Pervasive Biomedical Informatics • Internet of AI Thinsg (IoAT)*
 
 🌐 **Live Website:**  
 👉 https://parthapray.github.io
