@@ -2,9 +2,247 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Academic Service | Partha Pratim Ray</title>
+
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --primary: #17324d;
+      --primary-light: #24527a;
+      --accent: #0b6bcb;
+      --accent-soft: #e8f2ff;
+      --gold: #b7791f;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --border: #d9e2ec;
+      --shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #eef4fb 0%, #f8fafc 45%, #ffffff 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    a:hover {
+      color: var(--primary-light);
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      font-size: 0.93rem;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: all 0.25s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .page-header {
+      margin: 42px 0 26px;
+      padding: 34px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .page-header h1 {
+      margin: 0 0 10px;
+      color: var(--primary);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .page-header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      margin: 30px 0 44px;
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      margin: 0 0 24px;
+      color: var(--primary);
+      font-size: 1.8rem;
+      border-bottom: 3px solid var(--accent-soft);
+      padding-bottom: 10px;
+    }
+
+    .section h2:not(:first-child) {
+      margin-top: 36px;
+    }
+
+    .section h3 {
+      margin: 34px 0 18px;
+      color: var(--primary);
+      font-size: 1.45rem;
+      border-left: 5px solid var(--accent);
+      padding-left: 14px;
+    }
+
+    .section h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .section ul {
+      list-style: none;
+      margin: 0 0 18px;
+      padding: 0;
+    }
+
+    .section li {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--accent);
+      border-radius: 14px;
+      padding: 15px 18px 15px 20px;
+      margin: 12px 0;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .section li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.09);
+    }
+
+    .section li strong {
+      color: var(--primary);
+    }
+
+    .section li em {
+      color: var(--primary-light);
+      font-weight: 600;
+    }
+
+    .section hr {
+      border: none;
+      border-top: 1px dashed var(--border);
+      margin: 34px 0;
+    }
+
+    .work-card li {
+      border-left-color: var(--gold);
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 28px 16px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #ffffff;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 860px) {
+      nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 12px 0;
+      }
+
+      nav a {
+        white-space: nowrap;
+      }
+
+      .page-header,
+      .section {
+        padding: 24px 20px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: 94%;
+      }
+
+      .page-header {
+        margin-top: 24px;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+
+      .section h3 {
+        font-size: 1.25rem;
+      }
+
+      .section li {
+        padding: 14px 15px 14px 17px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
@@ -27,382 +265,368 @@
   </div>
 </header>
 
+<div class="container">
+
+  <div class="page-header">
+    <h1>Academic Service</h1>
+    <p>Work experience, editorial service, conference roles, administrative service, and reviewing</p>
+  </div>
+
+  <div class="section">
+
+    <h2>Work Experience</h2>
+
+    <ul class="work-card">
+      <li>
+        <strong>Total Experience:</strong> 14+ years in teaching and academic service
+      </li>
+
+      <li>
+        <strong>December 9, 2020 – Present</strong><br>
+        Assistant Professor (Senior Scale), Academic Level 11<br>
+        Department of Computer Applications,<br>
+        Sikkim University (A Central University), India
+      </li>
+
+      <li>
+        <strong>July 20, 2012 – December 8, 2020</strong><br>
+        Assistant Professor, Academic Level 10<br>
+        Department of Computer Applications,<br>
+        Sikkim University (A Central University), India
+      </li>
+
+      <li>
+        <strong>January 9, 2012 – June 20, 2012</strong><br>
+        Assistant Professor<br>
+        Surendra Institute of Engineering and Management,<br>
+        Siliguri, West Bengal, India
+      </li>
+    </ul>
+
+    <h2>Research and Professional Service</h2>
+
+    <h3>Editorial Roles Serving</h3>
+    <ul>
+      <li><strong>2026–</strong>Editor, <em>IETE Journal of Education </em></li>
+      <li><strong>2026–</strong> Editorial Board Member, <em>EAI Endorsed Transactions on AI and Robotics </em></li>
+      <li><strong>2026–</strong> Editorial Board Member, <em>EAI Endorsed Transactions on Digital Transformation of Industrial Processes since April 2026 </em></li>
+      <li><strong>2026–</strong> Editorial Board Member, <em>EAI Endorsed Transactions on Transportation Systems and Ocean Engineering since May 2026 </em></li>
+      <li><strong>2025–</strong> Associate Editor, <em>Frontiers in Communications and Networks </em></li>
+      <li><strong>2025–</strong> Associate Editor, <em>Frontiers in Bioinformatics </em></li>
+    </ul>
+
+    <hr>
+
+    <h3>Guest Editor, Chair, Special Issue, & Advisory Roles</h3>
+
+    <ul>
+      <li>Special Session Chair on "Internet of AI Things (IoAT): Intelligent, Edge-Aware, and Autonomous Sensor Ecosystems" at 13th International Conference on Sensors, IoT and Intelligent Networks (SENSORNETS 2026), July 18-20, 2026, Porto, Portugal, co-chaired by Shuai Li.</li>
+
+      <li>Special Issue on “Multi-Omics for Drug Response and Combination Therapy Prediction”, Frontiers of Bioinformatics, 2026, Frontiers co-edited by Partha Pratim Ray, Pu-Feng Du, Wei Lan, Asim Bikas Das.</li> 
+      
+      <li>Special Issue on “SS01: Internet of AI Things (IoAT): Agentic Smart Computing for Human-Centric and Sustainable Intelligent Systems”, at 8th International Conference on Smart Computing and Informatics (SCI-2026), 28-29 April 2026, Swinburne Vietnam, Hanoi Location.</li> 
+      
+      <li>Special Session Chair, at 3rd International Conference on Computing Systems & Intelligent Applications (ComSIA-2026), March 20-21, 2026, School of Open Learning, University of Delhi and Shaheed Rajguru College of Applied Sciences for Women, University of Delhi.</li>
+          
+      <li>Special Session Chair, on “SS10: Internet of AI Things (IoAT): Mathematical Foundations, Edge Intelligence, and Computational Paradigms”, at International Conference on Mathematical Sciences and Computational Intelligence (ICMSCI-2026), February 20–22, 2026, Department of Mathematics, P.G.D.A.V. College, University of Delhi.</li>
+          
+      <li>Lead Guest Editor, Special Issue on <em>“Pervasive Biomedical Informatics”</em>, 
+          Frontiers in Bioinformatics, 2026 (with Rahula Singh Jasrotia, Wei Lan, Lihong Peng, Manor Kandpal).</li>
+
+      <li>Special Session Chair, <em>“Innovations in Embedded Lightweight Machine Learning Models: Enabling TinyML at the Edge for Practical Applications”</em>, 
+          18th International Work-Conference on Artificial Neural Networks (IWANN 2025), Springer, 16–18 June 2025, A Coruña, Spain.</li>
+
+      <li>Session Chair, <em>“Deployment and Applications of Large Language Models in Edge-IoT Ecosystem”</em>, 
+          IEEE Gaming, Entertainment and Media (GEM 2025), 16–18 July 2025, Kaohsiung, Taiwan.</li>
+
+      <li>Track Chair, The 43rd IEEE International Conference on Consumer Electronics (ICCE 2025), 
+          11–14 January 2025, Las Vegas, NV, USA.</li>
+
+      <li>Workshop Chair, <em>“Designing Metaverse using Next Generation Internet of Things”</em>, 
+          2nd International Conference on Computing, Communication, Perception and Quantum Technology (CCPQT 2023), 
+          4–7 August 2023, Xiamen, China.</li>
+
+      <li>Lead Guest Editor, Special Issue on <em>“Security and Computing on IoT”</em>, 
+          Computers, Materials & Continua (SCI-Expanded, IF: 3.024), 2020–2021 
+          (with Nour Moustafa, UNSW, Australia; Kien Nguyen, Chiba University, Japan).</li>
+
+      <li>Guest Editor, Special Issue on <em>“Blockchain and IoT Enabled Sensing for Smart City”</em>, 
+          Sensors (MDPI) (SCI-Expanded, IF: 3.031), 2018–2019 
+          (with Vidyasagar Potdar, Curtin University, Australia).</li>
+
+      <li>Advisory Board Member, EU Project <em>DewSyS: Dew-Oriented Platform for Cyber-Physical Systems of Systems</em>, 2019.</li>
+
+      <li>Lead Guest Editor, Special Issue on <em>“Dew Computing: A Key Enabler of Future Internet of Things”</em>, 
+          Elsevier Journal Internet of Things Engineering: Cyber Physical Human Systems, 2018–2019 
+          (with Marc Frincu, West University of Timisoara, Romania; Yingwei Wang, University of Prince Edward Island, Canada; 
+          S.C. Karolj Skala, Ruđer Bošković Institute, Croatia).</li>
+
+      <li>Editorial Advisory Board Member, Edited Volume on 
+          <em>Cryptographic Security Solutions for the Internet of Things</em>, IGI Global, 2018.</li>
+
+      <li>Editor, ICT Express (Elsevier), 
+          Indexed in SCI-Expanded, Scopus, ESCI (IF: 4.317).</li>
+    </ul>
+
+    <hr>
+
+    <h3>Technical Program Committee</h3>
+
+    <ul>
+      <li> 13th International Conference on Electrical Engineering, Computer Science and Informatics (EECSI), from 02-03 September 2026, Yogyakarta, Indonesia. </li>
+      <li> 25th IEEE/WIC International Conference on Web Intelligence and Intelligent Agent Technology (WI-IAT 2026), from 3–6 December 2026, Brisbane, Australia.</li>
+      <li>IEEE International Work-Conference on Bioinformatics and Biomedical Engineering (IWBBIO 2026), 15–17 July 2026, Gran Canaria (Meloneras), Spain.</li>
+      <li>IEEE International Conference on Frontiers of Engineering and Emerging Technologies (FET’26), 22–23 April 2026, Kingdom of Bahrain.</li>
+      <li>The 9th IIEEJ International Conference on Image Electronics and Visual Computing (IEVC 2026), 16–19 March 2026, Hiroshima University, Japan.</li>
+
+      <li>The 3rd International Conference on Foundation and Large Language Models (FLLM 2025), 25–28 December 2025, Vienna, Austria.</li>
+      <li>17th International Symposium on Evaluation Science and Engineering (Bench 2025), 3–4 December 2025, Chengdu, China.</li>
+      <li>24th IEEE/WIC International Conference on Web Intelligence and Intelligent Agent Technology, 15–18 November 2025, London, United Kingdom.</li>
+      <li>IEEE 11th International Workshop on Mobile Applications (MobiApps 2025), co-located with FiCloud 2025 and MobiWIS 2025, 11–13 August 2025, Istanbul, Turkey.</li>
+      <li>IEEE Gaming, Entertainment and Media (GEM 2025), 16–18 July 2025, Kaohsiung, Taiwan.</li>
+      <li>5th IEEE Middle East & North Africa Communications Conference (MENACOMM 2025), 20–22 February 2025, Lebanese American University, Byblos, Lebanon.</li>
+
+      <li>2nd International Conference on Foundation and Large Language Models (FLLM 2024), 26–29 November 2024, Dubai, UAE.</li>
+      <li>30th IEEE International Conference on Telecommunications (IEEE ICT 2024), 24–27 June 2024, Dead Sea, Jordan.</li>
+      <li>IEEE International Conference on Consumer Electronics (ICCE-TW 2024), 9–11 July 2024, Taichung, Taiwan.</li>
+      <li>1st International Conference on Environment and Smart Education (ICENSE 2024), 7–8 August 2024, Universitas Muhammadiyah Yogyakarta, Indonesia.</li>
+
+      <li>International Conference on Foundation and Large Language Models (FLLM 2023), 13–14 December 2023, Dubai, UAE.</li>
+      <li>22nd IEEE/WIC International Conference on Web Intelligence and Intelligent Agent Technology, 26–29 October 2023, Venice, Italy.</li>
+      <li>IEEE CTSoc Gaming, Entertainment and Media (GEM 2023), 19–22 November 2023, Barbados.</li>
+      <li>IEEE 13th International Conference on Consumer Technology (ICCE 2023), 2–5 September 2023, Berlin, Germany (IFA).</li>
+
+      <li>45th IEEE COMPSAC 2021, 12–16 July 2021, USA.</li>
+      <li>10th International Conference on Communication Systems and Network Technologies (CSNT 2021), 24–25 April 2021, Bhopal, India.</li>
+      <li>ICNBST 2021, 2–4 December 2021, Kolkata, India.</li>
+
+      <li>1st International Conference on Artificial Intelligence & Modern Assistive Technology (ICAIMAT 2020), 24–26 September 2020, Riyadh, Saudi Arabia.</li>
+      <li>12th International Conference on Computational Intelligence and Communication Networks (CICN 2020), 25–26 September 2020, Nainital, India.</li>
+      <li>2nd IFSA Frequency & Time Conference (IFTC 2020), 23–25 September 2020, Porto, Portugal.</li>
+      <li>7th International Conference on Electrical Engineering, Computer Science and Informatics (EECSI 2020), 23–25 September 2020, Yogyakarta, Indonesia.</li>
+      <li>Ahmad Dahlan International Conference on Engineering and Science (ADICS-ESIT 2020), 26–27 August 2020, Yogyakarta, Indonesia.</li>
+      <li>3rd IEEE International Conference on Computer Applications & Information Security (ICCAIS 2020), 19–21 March 2020, Riyadh, Saudi Arabia.</li>
+
+      <li>IEEE Middle East & North Africa Communications Conference (MENACOMM 2019), 19–21 November 2019, Kingdom of Bahrain.</li>
+      <li>IEEE International Symposium on Innovation and Entrepreneurship (TEMS-ISIE 2019), 24–26 October 2019, Hangzhou, China.</li>
+      <li>IEEE/WIC/ACM International Conference on Web Intelligence (WI 2019), Demo Track, 14–17 October 2019, Thessaloniki, Greece.</li>
+      <li>5th International Conference on Computer Science and Information Technology (CSITEC 2019), 24–25 August 2019, Vienna, Austria.</li>
+      <li>AnSWeR 2019, Co-located with IEEE/RSJ IROS 2019, 4–8 November 2019, Macau, China.</li>
+      <li>Fifth International Conference on Image Information Processing (ICIIP 2019), 15–17 November 2019, Waknaghat, India.</li>
+      <li>First IFSA Frequency & Time Conference (IFTC 2019), 23–25 October 2019, Barcelona, Spain.</li>
+      <li>International Conference on Computer Science, Information Technology, and Electrical Engineering (ICOMITEE 2019), 16–17 October 2019, Jember, Indonesia.</li>
+
+      <li>International Conference on Data and Smart Systems Engineering (DSSE 2018), 9–12 July 2018, American University of Beirut, Lebanon.</li>
+      <li>International Conference on Information Society and Smart Cities (ISC 2018), 6–7 June 2018, Oxford, United Kingdom.</li>
+
+      <li>International Conference on Education and Social Development (ESD 2017), 20–22 October 2017, Xiamen, China.</li>
+      <li>International Conference on Ubiquitous Computing (ICUC 2017), 19–20 June 2017, Pune, India.</li>
+      <li>Second International Conference on Advanced Wireless Information and Communication Technologies (AWICT 2017), Université Paris-Saclay, France.</li>
+      <li>World Symposium on Computer Applications & Research (WSCAR 2017), 2–4 April 2017, Istanbul, Turkey.</li>
+      <li>International Conference on Internet of Things and Machine Learning (IML 2017), Liverpool John Moores University, United Kingdom.</li>
+      <li>10th International Conference on Theory and Practice of Electronic Governance (ICEGOV 2017), 7–9 March 2017, New Delhi, India.</li>
+      <li>2nd International Conference on Modelling, Simulation and Applied Mathematics (MSAM 2017), 26–27 March 2017, Bangkok, Thailand.</li>
+
+      <li>International Conference on Informatics, Robotics, Network, Control and Systems (IRONCONS 2016), 23–25 November 2016, Bandung, Indonesia.</li>
+      <li>International Conference on Geoinformatics (ICGWC 2016), 15–16 October 2016, Suzhou, China.</li>
+      <li>International Conference on Internet of Things and Applications (IOTA 2016), 22–24 January 2016, Pune, India.</li>
+      <li>7th International Conference on Computational Intelligence and Communication Networks (CICN 2015), 12–14 December 2015, Jabalpur, India.</li>
+      <li>1st International Conference on Computing and Communication Systems (I3CS 2015), 9–10 April 2015, Shillong, India.</li>
+    </ul>
 
+    <hr>
 
-  
-<div class="container section">
+    <h3>Training Programs, Workshops, and Conferences Organized</h3>
 
-<h2>Work Experience</h2>
+    <ul>
+      <li>Coordinator, Online Faculty Development Program on <em>LaTeX</em>, 
+          24–30 May 2024, Sikkim University.</li>
 
-<ul>
-  <li>
-    <strong>Total Experience:</strong> 14+ years in teaching and academic service
-  </li>
+      <li>Organizing Member, International Workshop on 
+          <em>Research Frontiers in Data Science and Modelling</em>, 
+          13–14 October 2023, Sikkim University.</li>
 
-  <li>
-    <strong>December 9, 2020 – Present</strong><br>
-    Assistant Professor (Senior Scale), Academic Level 11<br>
-    Department of Computer Applications,<br>
-    Sikkim University (A Central University), India
-  </li>
+      <li>Coordinator, Online Faculty Development Program on 
+          <em>Moodle Learning Management System (LMS)</em>, 
+          6–12 June 2022, Sikkim University.</li>
 
-  <li>
-    <strong>July 20, 2012 – December 8, 2020</strong><br>
-    Assistant Professor, Academic Level 10<br>
-    Department of Computer Applications,<br>
-    Sikkim University (A Central University), India
-  </li>
+      <li>Organizing Chair, 
+          6th International Conference on <em>Mathematica and Computing (ICMC 2020)</em>, 
+          18–20 March 2020, Sikkim University.</li>
 
-  <li>
-    <strong>January 9, 2012 – June 20, 2012</strong><br>
-    Assistant Professor<br>
-    Surendra Institute of Engineering and Management,<br>
-    Siliguri, West Bengal, India
-  </li>
-</ul>
+      <li>Organizer, Three-Day Workshop on 
+          <em>Blockchain Technology (BCT 2019)</em>, in collaboration with 
+          EICT Academy, IIT Guwahati, 28–30 March 2019, Sikkim University.</li>
 
+      <li>Organizer, <em>Innovation and Entrepreneurship Awareness Workshop and Contest 2018</em>, 
+          6 March 2019, Sikkim University.</li>
 
+      <li>Organizer, One-Day Seminar on <em>Green Computing</em>, 
+          28 August 2015, Sikkim University.</li>
 
-  
+      <li>Coordinator, Two-Day Hands-on Workshop on 
+          <em>LaTeX (TeX-2014)</em>, 15–16 November 2014, Sikkim University.</li>
 
-<h2>Research and Professional Service</h2>
-<h3>Editorial Roles Serving</h3>
-  <ul>
-	<li><strong>2026–</strong>Editor, <em>IETE Journal of Education </em></li>
-	 <li><strong>2026–</strong> Editorial Board Member, <em>EAI Endorsed Transactions on AI and Robotics </em></li>
-	 <li><strong>2026–</strong> Editorial Board Member, <em>EAI Endorsed Transactions on Digital Transformation of Industrial Processes since April 2026 </em></li>
-	<li><strong>2026–</strong> Editorial Board Member, <em>EAI Endorsed Transactions on Transportation Systems and Ocean Engineering since May 2026 </em></li>
-    <li><strong>2025–</strong> Associate Editor, <em>Frontiers in Communications and Networks </em></li>
-    <li><strong>2025–</strong> Associate Editor, <em>Frontiers in Bioinformatics </em></li>
-  </ul>
-<hr>
+      <li>Organizer, Five-Day Workshop on 
+          <em>ISI-SU Autumn School on Machine Intelligence and Applications (ASMIA)</em>, 
+          jointly with Indian Statistical Institute (ISI), Kolkata, 
+          22–26 September 2014, Sikkim University.</li>
 
-  
+      <li>Organizer, Five-Day Workshop on 
+          <em>Theory and Tools for Language and Document Analysis and Research (TTLDAR)</em>, 
+          jointly with Indian Statistical Institute (ISI), Kolkata, 
+          24–28 March 2014, Sikkim University.</li>
+    </ul>
 
-  
+    <hr>
 
+    <h3>Administrative Activities</h3>
 
-  
+    <ul>
+      <li>Polling Officer, Student Union (SUSA) Election 2025–26, Sikkim University.</li>
+      <li>Member, Departmental Purchase Committee, Sikkim University.</li>
 
-<h3>Guest Editor, Chair, Special Issue, & Advisory Roles</h3>
+      <li>Judge, Debate Competition on 
+          <em>“This House Rejects Artificial Intelligence Generated Art”</em>, 
+          organized by SUSA, Sikkim University, 13 April 2023.</li>
 
-<ul>
-  
-<li>Special Session Chair on "Internet of AI Things (IoAT): Intelligent, Edge-Aware, and Autonomous Sensor Ecosystems" at 13th International Conference on Sensors, IoT and Intelligent Networks (SENSORNETS 2026), July 18-20, 2026, Porto, Portugal, co-chaired by Shuai Li.</li>
+      <li>Member, IEEE Consumer Technology Society (CTSoc) 
+          <em>Internet of Things (IoT) Technical Committee</em>, IEEE, 2023–.</li>
 
-<li>Special Issue on “Multi-Omics for Drug Response and Combination Therapy Prediction”, Frontiers of Bioinformatics, 2026, Frontiers co-edited by Partha Pratim Ray, Pu-Feng Du, Wei Lan, Asim Bikas Das.</li> 
-	
-<li>Special Issue on “SS01: Internet of AI Things (IoAT): Agentic Smart Computing for Human-Centric and Sustainable Intelligent Systems”, at 8th International Conference on Smart Computing and Informatics (SCI-2026), 28-29 April 2026, Swinburne Vietnam, Hanoi Location.</li> 
-	
-<li>Special Session Chair, at 3rd International Conference on Computing Systems & Intelligent Applications (ComSIA-2026), March 20-21, 2026, School of Open Learning, University of Delhi and Shaheed Rajguru College of Applied Sciences for Women, University of Delhi.</li>
-		
-<li>Special Session Chair, on “SS10: Internet of AI Things (IoAT): Mathematical Foundations, Edge Intelligence, and Computational Paradigms”, at International Conference on Mathematical Sciences and Computational Intelligence (ICMSCI-2026), February 20–22, 2026, Department of Mathematics, P.G.D.A.V. College, University of Delhi.</li>
-		
-<li>Lead Guest Editor, Special Issue on <em>“Pervasive Biomedical Informatics”</em>, 
-    Frontiers in Bioinformatics, 2026 (with Rahula Singh Jasrotia, Wei Lan, Lihong Peng, Manor Kandpal).</li>
+      <li>Member, Admission Working Committee, 
+          nominated by the Vice-Chancellor, Sikkim University.</li>
 
-<li>Special Session Chair, <em>“Innovations in Embedded Lightweight Machine Learning Models: Enabling TinyML at the Edge for Practical Applications”</em>, 
-    18th International Work-Conference on Artificial Neural Networks (IWANN 2025), Springer, 16–18 June 2025, A Coruña, Spain.</li>
+      <li>Member, SWAYAM MOOC Review Committee, 
+          Department of Computer Applications, Sikkim University.</li>
 
-<li>Session Chair, <em>“Deployment and Applications of Large Language Models in Edge-IoT Ecosystem”</em>, 
-    IEEE Gaming, Entertainment and Media (GEM 2025), 16–18 July 2025, Kaohsiung, Taiwan.</li>
+      <li>Member, University Technical Committee for 
+          Review of Laboratory Equipment across Departments, Sikkim University.</li>
 
-<li>Track Chair, The 43rd IEEE International Conference on Consumer Electronics (ICCE 2025), 
-    11–14 January 2025, Las Vegas, NV, USA.</li>
+      <li>Member, Procurement Committee for Professional 
+          Audio–Video Online Meeting Software, Sikkim University.</li>
 
-<li>Workshop Chair, <em>“Designing Metaverse using Next Generation Internet of Things”</em>, 
-    2nd International Conference on Computing, Communication, Perception and Quantum Technology (CCPQT 2023), 
-    4–7 August 2023, Xiamen, China.</li>
+      <li>Member, College Inspection Committee for 
+          Affiliation Extension / Revision, Sikkim University.</li>
 
-<li>Lead Guest Editor, Special Issue on <em>“Security and Computing on IoT”</em>, 
-    Computers, Materials & Continua (SCI-Expanded, IF: 3.024), 2020–2021 
-    (with Nour Moustafa, UNSW, Australia; Kien Nguyen, Chiba University, Japan).</li>
+      <li>Coordinator, Compulsory Audit Paper on 
+          <em>National Service Scheme (NSS)</em>, 
+          Department of Computer Applications, Sikkim University.</li>
 
-<li>Guest Editor, Special Issue on <em>“Blockchain and IoT Enabled Sensing for Smart City”</em>, 
-    Sensors (MDPI) (SCI-Expanded, IF: 3.031), 2018–2019 
-    (with Vidyasagar Potdar, Curtin University, Australia).</li>
+      <li>Member, University ICT Policy Drafting Committee, 
+          Sikkim University.</li>
 
-<li>Advisory Board Member, EU Project <em>DewSyS: Dew-Oriented Platform for Cyber-Physical Systems of Systems</em>, 2019.</li>
+      <li>Member, Board of Studies (BoS), 
+          Department of Computer Applications, Sikkim University.</li>
 
-<li>Lead Guest Editor, Special Issue on <em>“Dew Computing: A Key Enabler of Future Internet of Things”</em>, 
-    Elsevier Journal Internet of Things Engineering: Cyber Physical Human Systems, 2018–2019 
-    (with Marc Frincu, West University of Timisoara, Romania; Yingwei Wang, University of Prince Edward Island, Canada; 
-    S.C. Karolj Skala, Ruđer Bošković Institute, Croatia).</li>
-
-<li>Editorial Advisory Board Member, Edited Volume on 
-    <em>Cryptographic Security Solutions for the Internet of Things</em>, IGI Global, 2018.</li>
+      <li>Member, School Board, 
+          School of Physical Sciences, Sikkim University.</li>
 
-<li>Editor, ICT Express (Elsevier), 
-    Indexed in SCI-Expanded, Scopus, ESCI (IF: 4.317).</li>
-</ul>
+      <li>Member, Project Purchase Committee, 
+          NETRA Laboratory, Department of Computer Applications.</li>
 
-<hr>
+      <li>Member, Project Appointment Committee, 
+          NETRA Laboratory, Department of Computer Applications.</li>
 
+      <li>Micro-Observer, Lok Sabha Election, 2019.</li>
 
+      <li>Member, B.Voc Syllabus Drafting Committee, 
+          Sikkim University.</li>
 
+      <li>Member, Oracle Software Procurement Scrutiny Committee, 
+          Sikkim University.</li>
 
-  
+      <li>Member, Departmental Review Committee, 
+          Department of Computer Applications, Sikkim University.</li>
 
-<h3>Technical Program Committee</h3>
+      <li>Chief Coordinator, IT Skill Courses, 
+          Sikkim University.</li>
 
-<ul>
+      <li>Member, Language Laboratory Setup Committee, 
+          Sikkim University.</li>
 
-   <li> 13th International Conference on Electrical Engineering, Computer Science and Informatics (EECSI), from 02-03 September 2026, Yogyakarta, Indonesia. </li>
-   <li> 25th IEEE/WIC International Conference on Web Intelligence and Intelligent Agent Technology (WI-IAT 2026), from 3–6 December 2026, Brisbane, Australia.</li>
-  <li>IEEE International Work-Conference on Bioinformatics and Biomedical Engineering (IWBBIO 2026), 15–17 July 2026, Gran Canaria (Meloneras), Spain.</li>
-  <li>IEEE International Conference on Frontiers of Engineering and Emerging Technologies (FET’26), 22–23 April 2026, Kingdom of Bahrain.</li>
-  <li>The 9th IIEEJ International Conference on Image Electronics and Visual Computing (IEVC 2026), 16–19 March 2026, Hiroshima University, Japan.</li>
-
-  <li>The 3rd International Conference on Foundation and Large Language Models (FLLM 2025), 25–28 December 2025, Vienna, Austria.</li>
-  <li>17th International Symposium on Evaluation Science and Engineering (Bench 2025), 3–4 December 2025, Chengdu, China.</li>
-  <li>24th IEEE/WIC International Conference on Web Intelligence and Intelligent Agent Technology, 15–18 November 2025, London, United Kingdom.</li>
-  <li>IEEE 11th International Workshop on Mobile Applications (MobiApps 2025), co-located with FiCloud 2025 and MobiWIS 2025, 11–13 August 2025, Istanbul, Turkey.</li>
-  <li>IEEE Gaming, Entertainment and Media (GEM 2025), 16–18 July 2025, Kaohsiung, Taiwan.</li>
-  <li>5th IEEE Middle East & North Africa Communications Conference (MENACOMM 2025), 20–22 February 2025, Lebanese American University, Byblos, Lebanon.</li>
+      <li>Member, Innovation and Entrepreneurship Development (IED) Cell, 
+          Sikkim University.</li>
 
-  <li>2nd International Conference on Foundation and Large Language Models (FLLM 2024), 26–29 November 2024, Dubai, UAE.</li>
-  <li>30th IEEE International Conference on Telecommunications (IEEE ICT 2024), 24–27 June 2024, Dead Sea, Jordan.</li>
-  <li>IEEE International Conference on Consumer Electronics (ICCE-TW 2024), 9–11 July 2024, Taichung, Taiwan.</li>
-  <li>1st International Conference on Environment and Smart Education (ICENSE 2024), 7–8 August 2024, Universitas Muhammadiyah Yogyakarta, Indonesia.</li>
+      <li>Member, University Purchase Committee, 
+          Sikkim University.</li>
 
-  <li>International Conference on Foundation and Large Language Models (FLLM 2023), 13–14 December 2023, Dubai, UAE.</li>
-  <li>22nd IEEE/WIC International Conference on Web Intelligence and Intelligent Agent Technology, 26–29 October 2023, Venice, Italy.</li>
-  <li>IEEE CTSoc Gaming, Entertainment and Media (GEM 2023), 19–22 November 2023, Barbados.</li>
-  <li>IEEE 13th International Conference on Consumer Technology (ICCE 2023), 2–5 September 2023, Berlin, Germany (IFA).</li>
+      <li>Member, Innovators’ Club, 
+          Incubator Cell Establishment, Sikkim University.</li>
 
-  <li>45th IEEE COMPSAC 2021, 12–16 July 2021, USA.</li>
-  <li>10th International Conference on Communication Systems and Network Technologies (CSNT 2021), 24–25 April 2021, Bhopal, India.</li>
-  <li>ICNBST 2021, 2–4 December 2021, Kolkata, India.</li>
+      <li>Member, B.Sc. Computer Science Syllabus Drafting Committee, 
+          Sikkim University.</li>
 
-  <li>1st International Conference on Artificial Intelligence & Modern Assistive Technology (ICAIMAT 2020), 24–26 September 2020, Riyadh, Saudi Arabia.</li>
-  <li>12th International Conference on Computational Intelligence and Communication Networks (CICN 2020), 25–26 September 2020, Nainital, India.</li>
-  <li>2nd IFSA Frequency & Time Conference (IFTC 2020), 23–25 September 2020, Porto, Portugal.</li>
-  <li>7th International Conference on Electrical Engineering, Computer Science and Informatics (EECSI 2020), 23–25 September 2020, Yogyakarta, Indonesia.</li>
-  <li>Ahmad Dahlan International Conference on Engineering and Science (ADICS-ESIT 2020), 26–27 August 2020, Yogyakarta, Indonesia.</li>
-  <li>3rd IEEE International Conference on Computer Applications & Information Security (ICCAIS 2020), 19–21 March 2020, Riyadh, Saudi Arabia.</li>
+      <li>Member, MCA Entrance Examination Committee, 
+          Sikkim University.</li>
 
-  <li>IEEE Middle East & North Africa Communications Conference (MENACOMM 2019), 19–21 November 2019, Kingdom of Bahrain.</li>
-  <li>IEEE International Symposium on Innovation and Entrepreneurship (TEMS-ISIE 2019), 24–26 October 2019, Hangzhou, China.</li>
-  <li>IEEE/WIC/ACM International Conference on Web Intelligence (WI 2019), Demo Track, 14–17 October 2019, Thessaloniki, Greece.</li>
-  <li>5th International Conference on Computer Science and Information Technology (CSITEC 2019), 24–25 August 2019, Vienna, Austria.</li>
-  <li>AnSWeR 2019, Co-located with IEEE/RSJ IROS 2019, 4–8 November 2019, Macau, China.</li>
-  <li>Fifth International Conference on Image Information Processing (ICIIP 2019), 15–17 November 2019, Waknaghat, India.</li>
-  <li>First IFSA Frequency & Time Conference (IFTC 2019), 23–25 October 2019, Barcelona, Spain.</li>
-  <li>International Conference on Computer Science, Information Technology, and Electrical Engineering (ICOMITEE 2019), 16–17 October 2019, Jember, Indonesia.</li>
+      <li>Member, Industry–Academia Interaction Committee, 
+          Meetings with General Managers of Industries in Sikkim.</li>
 
-  <li>International Conference on Data and Smart Systems Engineering (DSSE 2018), 9–12 July 2018, American University of Beirut, Lebanon.</li>
-  <li>International Conference on Information Society and Smart Cities (ISC 2018), 6–7 June 2018, Oxford, United Kingdom.</li>
+      <li>Member, Technical Sub-Committee for 
+          Center of Endangered Languages (CEL), Sikkim University.</li>
 
-  <li>International Conference on Education and Social Development (ESD 2017), 20–22 October 2017, Xiamen, China.</li>
-  <li>International Conference on Ubiquitous Computing (ICUC 2017), 19–20 June 2017, Pune, India.</li>
-  <li>Second International Conference on Advanced Wireless Information and Communication Technologies (AWICT 2017), Université Paris-Saclay, France.</li>
-  <li>World Symposium on Computer Applications & Research (WSCAR 2017), 2–4 April 2017, Istanbul, Turkey.</li>
-  <li>International Conference on Internet of Things and Machine Learning (IML 2017), Liverpool John Moores University, United Kingdom.</li>
-  <li>10th International Conference on Theory and Practice of Electronic Governance (ICEGOV 2017), 7–9 March 2017, New Delhi, India.</li>
-  <li>2nd International Conference on Modelling, Simulation and Applied Mathematics (MSAM 2017), 26–27 March 2017, Bangkok, Thailand.</li>
+      <li>Member, Training and Placement Committee, 
+          Sikkim University.</li>
 
-  <li>International Conference on Informatics, Robotics, Network, Control and Systems (IRONCONS 2016), 23–25 November 2016, Bandung, Indonesia.</li>
-  <li>International Conference on Geoinformatics (ICGWC 2016), 15–16 October 2016, Suzhou, China.</li>
-  <li>International Conference on Internet of Things and Applications (IOTA 2016), 22–24 January 2016, Pune, India.</li>
-  <li>7th International Conference on Computational Intelligence and Communication Networks (CICN 2015), 12–14 December 2015, Jabalpur, India.</li>
-  <li>1st International Conference on Computing and Communication Systems (I3CS 2015), 9–10 April 2015, Shillong, India.</li>
-</ul>
+      <li>Member, NAAC Criterion Committee 
+          (Infrastructure and Learning Resources), Sikkim University.</li>
 
-<hr>
+      <li>Member, IEEE–CSI Chapter Council Executive Body.</li>
 
-  
-<h3>Training Programs, Workshops, and Conferences Organized</h3>
+      <li>Member, Board of Studies (BoS), 
+          Department of Computer Sciences and Applications, Sikkim University.</li>
 
-<ul>
-  <li>Coordinator, Online Faculty Development Program on <em>LaTeX</em>, 
-      24–30 May 2024, Sikkim University.</li>
+      <li>Member, Convocation Committee, Sikkim University.</li>
 
-  <li>Organizing Member, International Workshop on 
-      <em>Research Frontiers in Data Science and Modelling</em>, 
-      13–14 October 2023, Sikkim University.</li>
+      <li>Member, Admission Committee, 
+          Integrated BCA–MCA Programme.</li>
 
-  <li>Coordinator, Online Faculty Development Program on 
-      <em>Moodle Learning Management System (LMS)</em>, 
-      6–12 June 2022, Sikkim University.</li>
+      <li>Member, Syllabus Drafting Committee, 
+          Integrated BCA–MCA Programme.</li>
 
-  <li>Organizing Chair, 
-      6th International Conference on <em>Mathematica and Computing (ICMC 2020)</em>, 
-      18–20 March 2020, Sikkim University.</li>
+      <li>Member, Department Library Committee, 
+          Integrated BCA–MCA Programme.</li>
 
-  <li>Organizer, Three-Day Workshop on 
-      <em>Blockchain Technology (BCT 2019)</em>, in collaboration with 
-      EICT Academy, IIT Guwahati, 28–30 March 2019, Sikkim University.</li>
+      <li>Member, Question Moderation Committee, 
+          Integrated BCA–MCA Programme.</li>
 
-  <li>Organizer, <em>Innovation and Entrepreneurship Awareness Workshop and Contest 2018</em>, 
-      6 March 2019, Sikkim University.</li>
+      <li>Member, Departmental Purchase Committee, 
+          Integrated BCA–MCA Programme.</li>
+    </ul>
 
-  <li>Organizer, One-Day Seminar on <em>Green Computing</em>, 
-      28 August 2015, Sikkim University.</li>
+    <hr>
 
-  <li>Coordinator, Two-Day Hands-on Workshop on 
-      <em>LaTeX (TeX-2014)</em>, 15–16 November 2014, Sikkim University.</li>
+    <h3>Reviewer</h3>
 
-  <li>Organizer, Five-Day Workshop on 
-      <em>ISI-SU Autumn School on Machine Intelligence and Applications (ASMIA)</em>, 
-      jointly with Indian Statistical Institute (ISI), Kolkata, 
-      22–26 September 2014, Sikkim University.</li>
+    <ul>
+      <li>IEEE Transactions on Industrial Informatics</li>
+      <li>IEEE Transactions on Instrumentation and Measurement</li>
+      <li>IEEE Systems Journal</li>
+      <li>IEEE Internet of Things Journal</li>
+      <li>IEEE Access</li>
+      <li>IEEE Sensors Journal</li>
+      <li>IEEE Consumer Electronics Magazine</li>
 
-  <li>Organizer, Five-Day Workshop on 
-      <em>Theory and Tools for Language and Document Analysis and Research (TTLDAR)</em>, 
-      jointly with Indian Statistical Institute (ISI), Kolkata, 
-      24–28 March 2014, Sikkim University.</li>
-</ul>
+      <li>Measurement (Elsevier)</li>
+      <li>Journal of Medical Systems (Springer)</li>
+      <li>ICT Express (Elsevier)</li>
+      <li>Computer Communications (Elsevier)</li>
+      <li>Future Generation Computer Systems (Elsevier)</li>
+      <li>Journal of Ambient Intelligence and Humanized Computing (Springer)</li>
 
-<hr>
+      <li>Sensors (MDPI)</li>
+      <li>Electronics (MDPI)</li>
+      <li>Applied Sciences (MDPI)</li>
 
-<h3>Administrative Activities</h3>
+      <li>Transactions on Emerging Telecommunications Technologies (Wiley)</li>
+      <li>International Journal of Communication Systems (Wiley)</li>
 
-<ul>
-  <li>Polling Officer, Student Union (SUSA) Election 2025–26, Sikkim University.</li>
-  <li>Member, Departmental Purchase Committee, Sikkim University.</li>
+      <li>Various IEEE, Springer, Elsevier, Wiley, and MDPI journals and conferences</li>
+    </ul>
 
-  <li>Judge, Debate Competition on 
-      <em>“This House Rejects Artificial Intelligence Generated Art”</em>, 
-      organized by SUSA, Sikkim University, 13 April 2023.</li>
+    <hr>
 
-  <li>Member, IEEE Consumer Technology Society (CTSoc) 
-      <em>Internet of Things (IoT) Technical Committee</em>, IEEE, 2023–.</li>
-
-  <li>Member, Admission Working Committee, 
-      nominated by the Vice-Chancellor, Sikkim University.</li>
-
-  <li>Member, SWAYAM MOOC Review Committee, 
-      Department of Computer Applications, Sikkim University.</li>
-
-  <li>Member, University Technical Committee for 
-      Review of Laboratory Equipment across Departments, Sikkim University.</li>
-
-  <li>Member, Procurement Committee for Professional 
-      Audio–Video Online Meeting Software, Sikkim University.</li>
-
-  <li>Member, College Inspection Committee for 
-      Affiliation Extension / Revision, Sikkim University.</li>
-
-  <li>Coordinator, Compulsory Audit Paper on 
-      <em>National Service Scheme (NSS)</em>, 
-      Department of Computer Applications, Sikkim University.</li>
-
-  <li>Member, University ICT Policy Drafting Committee, 
-      Sikkim University.</li>
-
-  <li>Member, Board of Studies (BoS), 
-      Department of Computer Applications, Sikkim University.</li>
-
-  <li>Member, School Board, 
-      School of Physical Sciences, Sikkim University.</li>
-
-  <li>Member, Project Purchase Committee, 
-      NETRA Laboratory, Department of Computer Applications.</li>
-
-  <li>Member, Project Appointment Committee, 
-      NETRA Laboratory, Department of Computer Applications.</li>
-
-  <li>Micro-Observer, Lok Sabha Election, 2019.</li>
-
-  <li>Member, B.Voc Syllabus Drafting Committee, 
-      Sikkim University.</li>
-
-  <li>Member, Oracle Software Procurement Scrutiny Committee, 
-      Sikkim University.</li>
-
-  <li>Member, Departmental Review Committee, 
-      Department of Computer Applications, Sikkim University.</li>
-
-  <li>Chief Coordinator, IT Skill Courses, 
-      Sikkim University.</li>
-
-  <li>Member, Language Laboratory Setup Committee, 
-      Sikkim University.</li>
-
-  <li>Member, Innovation and Entrepreneurship Development (IED) Cell, 
-      Sikkim University.</li>
-
-  <li>Member, University Purchase Committee, 
-      Sikkim University.</li>
-
-  <li>Member, Innovators’ Club, 
-      Incubator Cell Establishment, Sikkim University.</li>
-
-  <li>Member, B.Sc. Computer Science Syllabus Drafting Committee, 
-      Sikkim University.</li>
-
-  <li>Member, MCA Entrance Examination Committee, 
-      Sikkim University.</li>
-
-  <li>Member, Industry–Academia Interaction Committee, 
-      Meetings with General Managers of Industries in Sikkim.</li>
-
-  <li>Member, Technical Sub-Committee for 
-      Center of Endangered Languages (CEL), Sikkim University.</li>
-
-  <li>Member, Training and Placement Committee, 
-      Sikkim University.</li>
-
-  <li>Member, NAAC Criterion Committee 
-      (Infrastructure and Learning Resources), Sikkim University.</li>
-
-  <li>Member, IEEE–CSI Chapter Council Executive Body.</li>
-
-  <li>Member, Board of Studies (BoS), 
-      Department of Computer Sciences and Applications, Sikkim University.</li>
-
-  <li>Member, Convocation Committee, Sikkim University.</li>
-
-  <li>Member, Admission Committee, 
-      Integrated BCA–MCA Programme.</li>
-
-  <li>Member, Syllabus Drafting Committee, 
-      Integrated BCA–MCA Programme.</li>
-
-  <li>Member, Department Library Committee, 
-      Integrated BCA–MCA Programme.</li>
-
-  <li>Member, Question Moderation Committee, 
-      Integrated BCA–MCA Programme.</li>
-
-  <li>Member, Departmental Purchase Committee, 
-      Integrated BCA–MCA Programme.</li>
-</ul>
-
-<hr>
-
-<h3>Reviewer</h3>
-
-<ul>
-  <li>IEEE Transactions on Industrial Informatics</li>
-  <li>IEEE Transactions on Instrumentation and Measurement</li>
-  <li>IEEE Systems Journal</li>
-  <li>IEEE Internet of Things Journal</li>
-  <li>IEEE Access</li>
-  <li>IEEE Sensors Journal</li>
-  <li>IEEE Consumer Electronics Magazine</li>
-
-  <li>Measurement (Elsevier)</li>
-  <li>Journal of Medical Systems (Springer)</li>
-  <li>ICT Express (Elsevier)</li>
-  <li>Computer Communications (Elsevier)</li>
-  <li>Future Generation Computer Systems (Elsevier)</li>
-  <li>Journal of Ambient Intelligence and Humanized Computing (Springer)</li>
-
-  <li>Sensors (MDPI)</li>
-  <li>Electronics (MDPI)</li>
-  <li>Applied Sciences (MDPI)</li>
-
-  <li>Transactions on Emerging Telecommunications Technologies (Wiley)</li>
-  <li>International Journal of Communication Systems (Wiley)</li>
-
-  <li>Various IEEE, Springer, Elsevier, Wiley, and MDPI journals and conferences</li>
-</ul>
-
-<hr>
-
-
-
+  </div>
 
 </div>
 
