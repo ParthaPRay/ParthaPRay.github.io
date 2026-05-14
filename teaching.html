@@ -2,9 +2,273 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Teaching | Partha Pratim Ray</title>
+
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --primary: #17324d;
+      --primary-light: #24527a;
+      --accent: #0b6bcb;
+      --accent-soft: #e8f2ff;
+      --gold: #b7791f;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --border: #d9e2ec;
+      --shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #eef4fb 0%, #f8fafc 45%, #ffffff 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    a:hover {
+      color: var(--primary-light);
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      font-size: 0.93rem;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: all 0.25s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .page-header {
+      margin: 42px 0 26px;
+      padding: 34px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .page-header h1 {
+      margin: 0 0 10px;
+      color: var(--primary);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .page-header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      margin: 30px 0 44px;
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      margin: 0 0 24px;
+      color: var(--primary);
+      font-size: 1.8rem;
+      border-bottom: 3px solid var(--accent-soft);
+      padding-bottom: 10px;
+    }
+
+    .section h3 {
+      margin: 34px 0 18px;
+      color: var(--primary);
+      font-size: 1.45rem;
+      border-left: 5px solid var(--accent);
+      padding-left: 14px;
+    }
+
+    .section h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .section h4 {
+      margin: 28px 0 10px;
+      color: var(--primary-light);
+      font-size: 1.18rem;
+      background: var(--accent-soft);
+      padding: 10px 14px;
+      border-radius: 12px;
+      border-left: 5px solid var(--accent);
+    }
+
+    .section p {
+      margin: 10px 0;
+      color: var(--text);
+    }
+
+    .section p strong {
+      color: var(--primary);
+    }
+
+    .section ul {
+      list-style: none;
+      margin: 0 0 14px;
+      padding: 0;
+    }
+
+    .section li {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--accent);
+      border-radius: 14px;
+      padding: 14px 18px 14px 20px;
+      margin: 12px 0;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .section li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.09);
+    }
+
+    .section li strong {
+      color: var(--primary);
+    }
+
+    .section li em {
+      color: var(--primary-light);
+      font-weight: 600;
+    }
+
+    .section hr {
+      border: none;
+      border-top: 1px dashed var(--border);
+      margin: 30px 0;
+    }
+
+    .semester-label {
+      display: inline-block;
+      margin: 8px 0 6px;
+      padding: 5px 12px;
+      color: var(--primary);
+      background: #f8fbff;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 28px 16px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #ffffff;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 860px) {
+      nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 12px 0;
+      }
+
+      nav a {
+        white-space: nowrap;
+      }
+
+      .page-header,
+      .section {
+        padding: 24px 20px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: 94%;
+      }
+
+      .page-header {
+        margin-top: 24px;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+
+      .section h3 {
+        font-size: 1.25rem;
+      }
+
+      .section h4 {
+        font-size: 1.08rem;
+      }
+
+      .section li {
+        padding: 14px 15px 14px 17px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
@@ -27,234 +291,257 @@
   </div>
 </header>
 
-<div class="container section">
+<div class="container">
 
-<h2>Teaching</h2>
+  <div class="page-header">
+    <h1>Teaching</h1>
+    <p>Academic appointments, courses taught, and year-wise teaching responsibilities</p>
+  </div>
 
-<h3>Academic Appointments (Teaching)</h3>
-<ul>
-  <li>
-    <strong>Adjunct Faculty</strong>, Sikkim University (March–August 2023)<br>
-    Departments: Chinese, Hindi, Music, Psychology<br>
-    Course: <em>Introduction to Cyber Security</em> (UG, NEP 2020 – Mandatory)
-  </li>
-  <li>
-    <strong>Adjunct Faculty</strong>, Department of Horticulture, Sikkim University (February–July 2018)<br>
-    Courses: <em>Statistics</em>, <em>Computer Applications</em>
-  </li>
-  <li>
-    <strong>Adjunct Faculty</strong>, Department of Management, Sikkim University (August–December 2013)<br>
-    Course: <em>Computer Applications in Management</em>
-  </li>
-  <li>
-    <strong>Adjunct Faculty</strong>, Department of Management, Sikkim University (February–June 2014)<br>
-    Course: <em>Operations Research</em>
-  </li>
-</ul>
-<hr>
-  
+  <div class="section">
 
-<h3>Teaching Activities (Year-wise)</h3>
+    <h2>Teaching</h2>
 
-<h4>2025–26 (PG)</h4>
-<p><strong>Odd Semester (Monsoon / July–December)</strong></p>
-<ul>
-  <li>Discrete Mathematics</li>
-</ul>
-  <p><strong>Even Semester (Spring / February–June)</strong></p>
-<ul>
-  <li>Object Oriented Programming in C++ & Java (C++ only)</li>
-  <li>Object Oriented Programming Laboratory (C++ only)</li>
-</ul>
-<hr>
+    <h3>Academic Appointments (Teaching)</h3>
+    <ul>
+      <li>
+        <strong>Adjunct Faculty</strong>, Sikkim University (March–August 2023)<br>
+        Departments: Chinese, Hindi, Music, Psychology<br>
+        Course: <em>Introduction to Cyber Security</em> (UG, NEP 2020 – Mandatory)
+      </li>
+      <li>
+        <strong>Adjunct Faculty</strong>, Department of Horticulture, Sikkim University (February–July 2018)<br>
+        Courses: <em>Statistics</em>, <em>Computer Applications</em>
+      </li>
+      <li>
+        <strong>Adjunct Faculty</strong>, Department of Management, Sikkim University (August–December 2013)<br>
+        Course: <em>Computer Applications in Management</em>
+      </li>
+      <li>
+        <strong>Adjunct Faculty</strong>, Department of Management, Sikkim University (February–June 2014)<br>
+        Course: <em>Operations Research</em>
+      </li>
+    </ul>
 
-<h4>2024–25 (PG)</h4>
-<p><strong>Odd Semester (Monsoon / July–December)</strong></p>
-<ul>
-  <li>Discrete Mathematics</li>
-  <li>Web Programming Laboratory</li>
-</ul>
-<p><strong>Even Semester (Spring / February–June)</strong></p>
-<ul>
-  <li>Object Oriented Programming in C++ & Java (C++ only)</li>
-  <li>Object Oriented Programming Laboratory (C++ only)</li>
-</ul>
-<hr>
+    <hr>
+    
+    <h3>Teaching Activities (Year-wise)</h3>
 
-<h4>2023–24 (PG)</h4>
-<p><strong>Odd Semester (Monsoon / July–December)</strong></p>
-<ul>
-  <li>Discrete Mathematics</li>
-</ul>
-<p><strong>Even Semester (Spring / February–June)</strong></p>
-<ul>
-  <li>Object Oriented Programming in C++ & Java (C++ only)</li>
-  <li>Object Oriented Programming Laboratory (C++ only)</li>
-</ul>
-<hr>
+    <h4>2025–26 (PG)</h4>
+    <p class="semester-label"><strong>Odd Semester (Monsoon / July–December)</strong></p>
+    <ul>
+      <li>Discrete Mathematics</li>
+    </ul>
+    <p class="semester-label"><strong>Even Semester (Spring / February–June)</strong></p>
+    <ul>
+      <li>Object Oriented Programming in C++ & Java (C++ only)</li>
+      <li>Object Oriented Programming Laboratory (C++ only)</li>
+    </ul>
 
-<h4>2022–23 (PG / UG – NEP)</h4>
-<p><strong>Odd Semester (Monsoon / July–December)</strong></p>
-<ul>
-  <li>Introduction to Cyber Security (UG)</li>
-  <li>Introduction to Computer Systems</li>
-  <li>Discrete Mathematics</li>
-</ul>
-<p><strong>Even Semester (Spring / February–June)</strong></p>
-<ul>
-  <li>Object Oriented Programming in C++ & Java (Theory)</li>
-</ul>
-<hr>
+    <hr>
 
-<h4>2021–22 (PG)</h4>
-<p><strong>Odd Semester (Monsoon / July–December)</strong></p>
-<ul>
-  <li>Discrete Mathematics</li>
-</ul>
-<p><strong>Even Semester (Spring / February–June)</strong></p>
-<ul>
-  <li>Data Structures and Algorithms</li>
-  <li>Formal Language and Automata Theory</li>
-</ul>
-<hr>
+    <h4>2024–25 (PG)</h4>
+    <p class="semester-label"><strong>Odd Semester (Monsoon / July–December)</strong></p>
+    <ul>
+      <li>Discrete Mathematics</li>
+      <li>Web Programming Laboratory</li>
+    </ul>
+    <p class="semester-label"><strong>Even Semester (Spring / February–June)</strong></p>
+    <ul>
+      <li>Object Oriented Programming in C++ & Java (C++ only)</li>
+      <li>Object Oriented Programming Laboratory (C++ only)</li>
+    </ul>
 
-<h4>2020–21 (PG)</h4>
-<p><strong>Odd Semester (Monsoon / July–December)</strong></p>
-<ul>
-  <li>Mathematics I</li>
-  <li>Mathematics II</li>
-</ul>
-<p><strong>Even Semester (Spring / February–June)</strong></p>
-<ul>
-  <li>Computer Organization and Architecture</li>
-  <li>Digital Logic</li>
-  <li>Digital Logic Laboratory</li>
-</ul>
-<hr>
+    <hr>
 
-<h4>2019–20 (PG)</h4>
-<p><strong>Odd Semester (Monsoon / July–December)</strong></p>
-<ul>
-  <li>Digital Logic</li>
-  <li>Digital Logic Laboratory</li>
-  <li>Elective II</li>
-</ul>
-<p><strong>Even Semester (Spring / February–June)</strong></p>
-<ul>
-  <li>Computer Organization and Architecture</li>
-  <li>Data Structure Laboratory</li>
-</ul>
-<hr>
+    <h4>2023–24 (PG)</h4>
+    <p class="semester-label"><strong>Odd Semester (Monsoon / July–December)</strong></p>
+    <ul>
+      <li>Discrete Mathematics</li>
+    </ul>
+    <p class="semester-label"><strong>Even Semester (Spring / February–June)</strong></p>
+    <ul>
+      <li>Object Oriented Programming in C++ & Java (C++ only)</li>
+      <li>Object Oriented Programming Laboratory (C++ only)</li>
+    </ul>
 
-<h4>2018–19 (PG / Integrated)</h4>
-<p><strong>Odd Semester (Monsoon / July–December)</strong></p>
-<ul>
-  <li>Elective II</li>
-  <li>Digital Logic Laboratory</li>
-  <li>Formal Language and Automata Theory</li>
-</ul>
-<p><strong>Even Semester (Spring / February–June)</strong></p>
-<ul>
-  <li>Mathematics II</li>
-  <li>Computer Organization and Architecture</li>
-</ul>
-<hr>
+    <hr>
 
-<h4>2017–18 (PG / Integrated)</h4>
-<p><strong>Odd Semester (Monsoon / July–December)</strong></p>
-<ul>
-  <li>Digital Logic</li>
-  <li>Digital Logic Laboratory</li>
-  <li>Microprocessor and Microcontroller</li>
-  <li>Hardware Design Laboratory</li>
-</ul>
-<p><strong>Even Semester (Spring / February–June)</strong></p>
-<ul>
-  <li>Elective II</li>
-  <li>Computer Organization and Architecture</li>
-</ul>
-<hr>
+    <h4>2022–23 (PG / UG – NEP)</h4>
+    <p class="semester-label"><strong>Odd Semester (Monsoon / July–December)</strong></p>
+    <ul>
+      <li>Introduction to Cyber Security (UG)</li>
+      <li>Introduction to Computer Systems</li>
+      <li>Discrete Mathematics</li>
+    </ul>
+    <p class="semester-label"><strong>Even Semester (Spring / February–June)</strong></p>
+    <ul>
+      <li>Object Oriented Programming in C++ & Java (Theory)</li>
+    </ul>
 
-<h4>2016–17 (PG / Integrated)</h4>
-<p><strong>Odd Semester (Monsoon / July–December)</strong></p>
-<ul>
-  <li>Microprocessor and Microcontroller</li>
-  <li>Hardware Design Laboratory</li>
-  <li>Computer Organization and Architecture</li>
-</ul>
-<p><strong>Even Semester (Spring / February–June)</strong></p>
-<ul>
-  <li>Object Oriented Analysis and Design</li>
-  <li>Advanced Java Laboratory</li>
-  <li>Elective II</li>
-</ul>
-<hr>
+    <hr>
 
-<h4>2015–16 (PG / Integrated)</h4>
-<p><strong>Odd Semester (Monsoon / July–December)</strong></p>
-<ul>
-  <li>Computer Organization</li>
-  <li>Microprocessors</li>
-  <li>Computer Organization Laboratory</li>
-  <li>Mathematics III</li>
-</ul>
-<p><strong>Even Semester (Spring / February–June)</strong></p>
-<ul>
-  <li>Formal Language and Automata Theory</li>
-  <li>Microprocessors Laboratory</li>
-</ul>
-<hr>
+    <h4>2021–22 (PG)</h4>
+    <p class="semester-label"><strong>Odd Semester (Monsoon / July–December)</strong></p>
+    <ul>
+      <li>Discrete Mathematics</li>
+    </ul>
+    <p class="semester-label"><strong>Even Semester (Spring / February–June)</strong></p>
+    <ul>
+      <li>Data Structures and Algorithms</li>
+      <li>Formal Language and Automata Theory</li>
+    </ul>
 
-<h4>2014–15 (UG / PhD Coursework)</h4>
-<p><strong>Odd Semester (Monsoon / July–December)</strong></p>
-<ul>
-  <li>Basic Electronics</li>
-  <li>PhD Research Methodology (Statistics)</li>
-</ul>
-<p><strong>Even Semester (Spring / February–June)</strong></p>
-<ul>
-  <li>Microprocessors</li>
-  <li>Microprocessors Laboratory</li>
-</ul>
-<hr>
+    <hr>
 
-<h4>2013–14 (UG)</h4>
-<p><strong>Odd Semester (Monsoon / July–December)</strong></p>
-<ul>
-  <li>Computer System Architecture</li>
-  <li>Data Structures</li>
-  <li>Basic Electronics</li>
-  <li>Mathematical Foundation I</li>
-  <li>Computer Application in Management</li>
-</ul>
-<p><strong>Even Semester (Spring / February–June)</strong></p>
-<ul>
-  <li>Mathematics II</li>
-  <li>Computer Organization and Architecture</li>
-</ul>
-<hr>
+    <h4>2020–21 (PG)</h4>
+    <p class="semester-label"><strong>Odd Semester (Monsoon / July–December)</strong></p>
+    <ul>
+      <li>Mathematics I</li>
+      <li>Mathematics II</li>
+    </ul>
+    <p class="semester-label"><strong>Even Semester (Spring / February–June)</strong></p>
+    <ul>
+      <li>Computer Organization and Architecture</li>
+      <li>Digital Logic</li>
+      <li>Digital Logic Laboratory</li>
+    </ul>
 
-<h4>2012–13 (UG)</h4>
-<p><strong>Odd Semester (Monsoon / July–December)</strong></p>
-<ul>
-  <li>Basic Electronics</li>
-  <li>Computer System Architecture</li>
-</ul>
-<p><strong>Even Semester (Spring / February–June)</strong></p>
-<ul>
-  <li>Computer Organization</li>
-  <li>Laboratory: Basics of Computing</li>
-</ul>
-<hr>
+    <hr>
 
-<h4>Additional Teaching</h4>
-<ul>
-  <li>
-    <strong>Surendra Institute of Engineering and Management, Siliguri</strong><br>
-    Full Semester Teaching (January–June 2012)<br>
-    Course: <em>C Programming and Laboratory</em> (B.Tech)
-  </li>
-</ul>
+    <h4>2019–20 (PG)</h4>
+    <p class="semester-label"><strong>Odd Semester (Monsoon / July–December)</strong></p>
+    <ul>
+      <li>Digital Logic</li>
+      <li>Digital Logic Laboratory</li>
+      <li>Elective II</li>
+    </ul>
+    <p class="semester-label"><strong>Even Semester (Spring / February–June)</strong></p>
+    <ul>
+      <li>Computer Organization and Architecture</li>
+      <li>Data Structure Laboratory</li>
+    </ul>
+
+    <hr>
+
+    <h4>2018–19 (PG / Integrated)</h4>
+    <p class="semester-label"><strong>Odd Semester (Monsoon / July–December)</strong></p>
+    <ul>
+      <li>Elective II</li>
+      <li>Digital Logic Laboratory</li>
+      <li>Formal Language and Automata Theory</li>
+    </ul>
+    <p class="semester-label"><strong>Even Semester (Spring / February–June)</strong></p>
+    <ul>
+      <li>Mathematics II</li>
+      <li>Computer Organization and Architecture</li>
+    </ul>
+
+    <hr>
+
+    <h4>2017–18 (PG / Integrated)</h4>
+    <p class="semester-label"><strong>Odd Semester (Monsoon / July–December)</strong></p>
+    <ul>
+      <li>Digital Logic</li>
+      <li>Digital Logic Laboratory</li>
+      <li>Microprocessor and Microcontroller</li>
+      <li>Hardware Design Laboratory</li>
+    </ul>
+    <p class="semester-label"><strong>Even Semester (Spring / February–June)</strong></p>
+    <ul>
+      <li>Elective II</li>
+      <li>Computer Organization and Architecture</li>
+    </ul>
+
+    <hr>
+
+    <h4>2016–17 (PG / Integrated)</h4>
+    <p class="semester-label"><strong>Odd Semester (Monsoon / July–December)</strong></p>
+    <ul>
+      <li>Microprocessor and Microcontroller</li>
+      <li>Hardware Design Laboratory</li>
+      <li>Computer Organization and Architecture</li>
+    </ul>
+    <p class="semester-label"><strong>Even Semester (Spring / February–June)</strong></p>
+    <ul>
+      <li>Object Oriented Analysis and Design</li>
+      <li>Advanced Java Laboratory</li>
+      <li>Elective II</li>
+    </ul>
+
+    <hr>
+
+    <h4>2015–16 (PG / Integrated)</h4>
+    <p class="semester-label"><strong>Odd Semester (Monsoon / July–December)</strong></p>
+    <ul>
+      <li>Computer Organization</li>
+      <li>Microprocessors</li>
+      <li>Computer Organization Laboratory</li>
+      <li>Mathematics III</li>
+    </ul>
+    <p class="semester-label"><strong>Even Semester (Spring / February–June)</strong></p>
+    <ul>
+      <li>Formal Language and Automata Theory</li>
+      <li>Microprocessors Laboratory</li>
+    </ul>
+
+    <hr>
+
+    <h4>2014–15 (UG / PhD Coursework)</h4>
+    <p class="semester-label"><strong>Odd Semester (Monsoon / July–December)</strong></p>
+    <ul>
+      <li>Basic Electronics</li>
+      <li>PhD Research Methodology (Statistics)</li>
+    </ul>
+    <p class="semester-label"><strong>Even Semester (Spring / February–June)</strong></p>
+    <ul>
+      <li>Microprocessors</li>
+      <li>Microprocessors Laboratory</li>
+    </ul>
+
+    <hr>
+
+    <h4>2013–14 (UG)</h4>
+    <p class="semester-label"><strong>Odd Semester (Monsoon / July–December)</strong></p>
+    <ul>
+      <li>Computer System Architecture</li>
+      <li>Data Structures</li>
+      <li>Basic Electronics</li>
+      <li>Mathematical Foundation I</li>
+      <li>Computer Application in Management</li>
+    </ul>
+    <p class="semester-label"><strong>Even Semester (Spring / February–June)</strong></p>
+    <ul>
+      <li>Mathematics II</li>
+      <li>Computer Organization and Architecture</li>
+    </ul>
+
+    <hr>
+
+    <h4>2012–13 (UG)</h4>
+    <p class="semester-label"><strong>Odd Semester (Monsoon / July–December)</strong></p>
+    <ul>
+      <li>Basic Electronics</li>
+      <li>Computer System Architecture</li>
+    </ul>
+    <p class="semester-label"><strong>Even Semester (Spring / February–June)</strong></p>
+    <ul>
+      <li>Computer Organization</li>
+      <li>Laboratory: Basics of Computing</li>
+    </ul>
+
+    <hr>
+
+    <h4>Additional Teaching</h4>
+    <ul>
+      <li>
+        <strong>Surendra Institute of Engineering and Management, Siliguri</strong><br>
+        Full Semester Teaching (January–June 2012)<br>
+        Course: <em>C Programming and Laboratory</em> (B.Tech)
+      </li>
+    </ul>
+
+  </div>
 
 </div>
 
