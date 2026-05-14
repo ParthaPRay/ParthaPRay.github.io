@@ -2,9 +2,262 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Media Coverage | Partha Pratim Ray</title>
+
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --primary: #17324d;
+      --primary-light: #24527a;
+      --accent: #0b6bcb;
+      --accent-soft: #e8f2ff;
+      --gold: #b7791f;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --border: #d9e2ec;
+      --shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #eef4fb 0%, #f8fafc 45%, #ffffff 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-word;
+      font-weight: 700;
+    }
+
+    a:hover {
+      color: var(--primary-light);
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      font-size: 0.93rem;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: all 0.25s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .page-header {
+      margin: 42px 0 26px;
+      padding: 34px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .page-header h1 {
+      margin: 0 0 10px;
+      color: var(--primary);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .page-header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      margin: 30px 0 44px;
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      margin: 0 0 24px;
+      color: var(--primary);
+      font-size: 1.8rem;
+      border-bottom: 3px solid var(--accent-soft);
+      padding-bottom: 10px;
+    }
+
+    .section ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .section li {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--accent);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 18px 0;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .section li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.09);
+    }
+
+    .section li::before {
+      content: "📰";
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .section li strong {
+      color: var(--primary);
+    }
+
+    .section li em {
+      color: var(--primary-light);
+      font-weight: 700;
+    }
+
+    .media-frame {
+      max-width: 800px;
+      margin-top: 8px;
+    }
+
+    .media-frame iframe {
+      width: 100%;
+      height: 420px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+      background: #ffffff;
+    }
+
+    .media-link {
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
+
+    .section img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-top: 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12);
+      background: #ffffff;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 28px 16px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #ffffff;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 860px) {
+      nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 12px 0;
+      }
+
+      nav a {
+        white-space: nowrap;
+      }
+
+      .page-header,
+      .section {
+        padding: 24px 20px;
+      }
+
+      .media-frame iframe {
+        height: 360px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: 94%;
+      }
+
+      .page-header {
+        margin-top: 24px;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+
+      .section li {
+        padding: 16px 15px;
+      }
+
+      .media-frame iframe {
+        height: 300px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
@@ -27,107 +280,113 @@
   </div>
 </header>
 
-<div class="container section">
+<div class="container">
 
-  <h2>Media Coverage & News Highlights</h2>
+  <div class="page-header">
+    <h1>Media Coverage</h1>
+    <p>News highlights, media mentions, e-paper coverage, interviews, and public recognitions</p>
+  </div>
 
-  <ul>
+  <div class="section">
 
-    <li>
-      <div style="max-width:800px;">
-        <iframe
-          src="assets/DOC-20260110-WA0000.pdf"
-          width="100%"
-          height="400px"
-          style="border:1px solid #ccc; border-radius:6px;">
-        </iframe>
+    <h2>Media Coverage & News Highlights</h2>
 
-        <p style="margin-top:10px;">
-          <a href="assets/DOC-20260110-WA0000.pdf" target="_blank">
-            View / Download Dossier (PDF)
-          </a>
-        </p>
-      </div>
-    </li>
+    <ul>
 
-    <li>
-      Featured in <em>Sikkim Express</em> e-paper highlighting recognition as one of the
-      <strong>World’s Top 2% Scientists</strong>, dated <strong>10 January 2026</strong>.
-      <br>
-      <a href="http://epaper.sikkimexpress.com/Home/PopUp/?url=%2Fuploads%2Fimage_details%2F2026-01-10%2F202601100214393.jpg&category=0&date=2026-01-10&button=" target="_blank">
-        View e-paper news
-      </a>
-      <br><br>
-      <img src="images/sikkimexpress-top2percent-jan2026.png" alt="Sikkim Express news cutout – Top 2% Scientist January 2026">
-    </li>
+      <li>
+        <div class="media-frame">
+          <iframe
+            src="assets/DOC-20260110-WA0000.pdf">
+          </iframe>
 
-    <li>
-      Featured in <em>The Indian Express</em> e-paper highlighting recognition as one of the
-      <strong>World’s Top 2% Scientists</strong>, dated <strong>5 October 2025</strong>.
-      <br>
-      <a href="https://indianexpress.com/article/education/6239-indian-faculty-featured-in-the-worlds-top-2-scientists-check-the-list-10264722/" target="_blank">
-        View e-paper news
-      </a>
-    </li>
+          <p class="media-link">
+            <a href="assets/DOC-20260110-WA0000.pdf" target="_blank">
+              View / Download Dossier (PDF)
+            </a>
+          </p>
+        </div>
+      </li>
 
-    <li>
-      Featured in <em>Education Times</em> e-paper highlighting recognition as one of the
-      <strong>World’s Top 2% Scientists</strong>, dated <strong>23 September 2025</strong>.
-      <br>
-      <a href="https://www.educationtimes.com/article/newsroom/99739696/iits-iisc-and-nits-shine-prominently-among-6-239-indian-researchers-making-it-to-stanford-list-of-top-2-scientists" target="_blank">
-        View e-paper news
-      </a>
-    </li>
+      <li>
+        Featured in <em>Sikkim Express</em> e-paper highlighting recognition as one of the
+        <strong>World’s Top 2% Scientists</strong>, dated <strong>10 January 2026</strong>.
+        <br>
+        <a href="http://epaper.sikkimexpress.com/Home/PopUp/?url=%2Fuploads%2Fimage_details%2F2026-01-10%2F202601100214393.jpg&category=0&date=2026-01-10&button=" target="_blank">
+          View e-paper news
+        </a>
+        <br><br>
+        <img src="images/sikkimexpress-top2percent-jan2026.png" alt="Sikkim Express news cutout – Top 2% Scientist January 2026">
+      </li>
 
-    <li>
-      Featured in <em>Jagran Josh</em> e-paper highlighting recognition as one of the
-      <strong>World’s Top 2% Scientists</strong>, dated <strong>23 September 2025</strong>.
-      <br>
-      <a href="https://www.jagranjosh.com/colleges/iits-iisc-aiims-among-6239-indian-scholars-featured-in-stanfords-top-2-review-more-details-here-clga-1870000319-1" target="_blank">
-        View e-paper news
-      </a>
-    </li>
+      <li>
+        Featured in <em>The Indian Express</em> e-paper highlighting recognition as one of the
+        <strong>World’s Top 2% Scientists</strong>, dated <strong>5 October 2025</strong>.
+        <br>
+        <a href="https://indianexpress.com/article/education/6239-indian-faculty-featured-in-the-worlds-top-2-scientists-check-the-list-10264722/" target="_blank">
+          View e-paper news
+        </a>
+      </li>
 
-    <li>
-      Featured in <em>Uttarbanga Sambad</em> e-paper with a Bengali news article titled
-      <strong>আর্দ্রতায় যোগ করোনার</strong>, dated <strong>31 May 2021</strong>.
-      <br><br>
-      <img src="images/uttarbanga-corona.jpg"
-           alt="Uttarbanga Sambad news cutout – Bengali COVID-related article, 31 May 2021">
-    </li>
+      <li>
+        Featured in <em>Education Times</em> e-paper highlighting recognition as one of the
+        <strong>World’s Top 2% Scientists</strong>, dated <strong>23 September 2025</strong>.
+        <br>
+        <a href="https://www.educationtimes.com/article/newsroom/99739696/iits-iisc-and-nits-shine-prominently-among-6-239-indian-researchers-making-it-to-stanford-list-of-top-2-scientists" target="_blank">
+          View e-paper news
+        </a>
+      </li>
 
-    <li>
-      Featured in <em>Sikkim Chronicle</em> e-paper highlighting recognition as one of the
-      <strong>World’s Top 2% Scientists</strong>, dated <strong>2 December 2020</strong>.
-      <br>
-      <a href="https://www.facebook.com/thesikkimchronicle/posts/sikkimchroniclepress-release-partha-pratim-ray-assistant-professor-from-the-sikk/2835153363470494/" target="_blank">
-        View e-paper news
-      </a>
-    </li>
+      <li>
+        Featured in <em>Jagran Josh</em> e-paper highlighting recognition as one of the
+        <strong>World’s Top 2% Scientists</strong>, dated <strong>23 September 2025</strong>.
+        <br>
+        <a href="https://www.jagranjosh.com/colleges/iits-iisc-aiims-among-6239-indian-scholars-featured-in-stanfords-top-2-review-more-details-here-clga-1870000319-1" target="_blank">
+          View e-paper news
+        </a>
+      </li>
 
-    <li>
-      Featured in <em>Uttarbanga Sambad</em> e-paper reporting inclusion in
-      <strong>স্ট্যানফোর্ডের বিশ্বসেরা বিজ্ঞানীর তালিকায় কোচবিহারের পার্থপ্রতিম</strong>,
-      dated <strong>18 November 2020</strong>.
-      <br><br>
-      <img src="images/uttarbanga-top2.jpg"
-           alt="Uttarbanga Sambad news cutout – Stanford Top Scientists recognition">
-    </li>
+      <li>
+        Featured in <em>Uttarbanga Sambad</em> e-paper with a Bengali news article titled
+        <strong>আর্দ্রতায় যোগ করোনার</strong>, dated <strong>31 May 2021</strong>.
+        <br><br>
+        <img src="images/uttarbanga-corona.jpg"
+             alt="Uttarbanga Sambad news cutout – Bengali COVID-related article, 31 May 2021">
+      </li>
 
-    <li>
-      Featured in <em>Uttarbanga Sambad</em> e-paper featuring an education interview in Bengali:
-      <strong>শিক্ষার্থীদের আগ্রহের ক্ষেত্রে সঠিকভাবে চিহ্নিত করতে হবে</strong>,
-      dated <strong>23 June 2019</strong>.
-      <br>
-      <a href="assets/uttarbanga-parasuna-2019-06-23_12.pdf" target="_blank">
-        View full Bengali interview (PDF)
-      </a>
-      <br><br>
-      <img src="images/uttarbanga-sambad-23-june-2019.png"
-           alt="Uttarbanga Sambad news cutout – Bengali education interview, 23 June 2019">
-    </li>
+      <li>
+        Featured in <em>Sikkim Chronicle</em> e-paper highlighting recognition as one of the
+        <strong>World’s Top 2% Scientists</strong>, dated <strong>2 December 2020</strong>.
+        <br>
+        <a href="https://www.facebook.com/thesikkimchronicle/posts/sikkimchroniclepress-release-partha-pratim-ray-assistant-professor-from-the-sikk/2835153363470494/" target="_blank">
+          View e-paper news
+        </a>
+      </li>
 
-  </ul>
+      <li>
+        Featured in <em>Uttarbanga Sambad</em> e-paper reporting inclusion in
+        <strong>স্ট্যানফোর্ডের বিশ্বসেরা বিজ্ঞানীর তালিকায় কোচবিহারের পার্থপ্রতিম</strong>,
+        dated <strong>18 November 2020</strong>.
+        <br><br>
+        <img src="images/uttarbanga-top2.jpg"
+             alt="Uttarbanga Sambad news cutout – Stanford Top Scientists recognition">
+      </li>
+
+      <li>
+        Featured in <em>Uttarbanga Sambad</em> e-paper featuring an education interview in Bengali:
+        <strong>শিক্ষার্থীদের আগ্রহের ক্ষেত্রে সঠিকভাবে চিহ্নিত করতে হবে</strong>,
+        dated <strong>23 June 2019</strong>.
+        <br>
+        <a href="assets/uttarbanga-parasuna-2019-06-23_12.pdf" target="_blank">
+          View full Bengali interview (PDF)
+        </a>
+        <br><br>
+        <img src="images/uttarbanga-sambad-23-june-2019.png"
+             alt="Uttarbanga Sambad news cutout – Bengali education interview, 23 June 2019">
+      </li>
+
+    </ul>
+
+  </div>
 
 </div>
 
