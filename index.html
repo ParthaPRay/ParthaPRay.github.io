@@ -2,12 +2,315 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Partha Pratim Ray | Assistant Professor</title>
-  <meta name="description" content="Academic research profile of Partha Pratim Ray, Assistant Professor at Sikkim University working in IoT, Edge AI, and Generative AI.">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Partha Pratim Ray | Assistant Professor</title>
+
+  <meta name="description" content="Academic research profile of Partha Pratim Ray, Assistant Professor at Sikkim University working in IoT, Edge AI, and Generative AI.">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --primary: #17324d;
+      --primary-light: #24527a;
+      --accent: #0b6bcb;
+      --accent-soft: #e8f2ff;
+      --gold: #b7791f;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --border: #d9e2ec;
+      --shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #eef4fb 0%, #f8fafc 45%, #ffffff 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    a:hover {
+      color: var(--primary-light);
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      font-size: 0.93rem;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: all 0.25s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .profile {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 34px;
+      align-items: start;
+      margin: 42px 0 30px;
+      padding: 34px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .profile img {
+      width: 100%;
+      max-width: 240px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 7px solid #ffffff;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+      justify-self: center;
+      background: #ffffff;
+    }
+
+    .profile h1 {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .profile p {
+      margin: 0 0 18px;
+      color: var(--text);
+    }
+
+    .profile p:first-of-type {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .profile strong {
+      color: var(--primary);
+    }
+
+    .profile p:last-child {
+      background: var(--accent-soft);
+      border-left: 5px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin-bottom: 0;
+    }
+
+    .highlight-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 6px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 24px 26px;
+      margin: 26px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .highlight-box p {
+      margin-top: 0;
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight-box em {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .highlight-box ul {
+      margin: 14px 0 0;
+      padding-left: 22px;
+    }
+
+    .highlight-box li {
+      margin-bottom: 12px;
+    }
+
+    .highlight-box hr {
+      border: none;
+      border-top: 1px dashed var(--border);
+      margin: 24px 0;
+    }
+
+    .blink {
+      display: inline-block;
+      background: #d62828;
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 999px;
+      margin-right: 8px;
+      vertical-align: middle;
+      animation: pulse 1.4s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.72;
+        transform: scale(1.04);
+      }
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      margin: 30px 0 44px;
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      margin: 0 0 22px;
+      color: var(--primary);
+      font-size: 1.8rem;
+      border-bottom: 3px solid var(--accent-soft);
+      padding-bottom: 10px;
+    }
+
+    .announcement {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--gold);
+      border-radius: 14px;
+      padding: 15px 18px;
+      margin: 14px 0;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .announcement:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.09);
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 28px 16px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #ffffff;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    footer img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 860px) {
+      .profile {
+        grid-template-columns: 1fr;
+        padding: 26px 22px;
+      }
+
+      .profile img {
+        max-width: 210px;
+      }
+
+      nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 12px 0;
+      }
+
+      nav a {
+        white-space: nowrap;
+      }
+
+      .highlight-box,
+      .section {
+        padding: 22px 18px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: 94%;
+      }
+
+      .profile {
+        margin-top: 24px;
+      }
+
+      .profile h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
 
 <header>
   <div class="container">
@@ -37,36 +340,39 @@
 
     <div>
       <h1>Partha Pratim Ray</h1>
-      <p><strong>Assistant Professor (Stage 2)</strong><br>
-      Department of Computer Applications<br>
-      Sikkim University, Gangtok 737102, Sikkim, India</p>
 
       <p>
-      My research focuses on <strong>Internet of Things</strong>, 
-      <strong>Edge Artificial Intelligence</strong>, 
-      <strong>Pervasive Generative AI</strong>, and 
-      <strong>resource-constrained machine learning systems</strong>, 
-      with emphasis on reproducible deployment in real-world environments.
+        <strong>Assistant Professor (Stage 2)</strong><br>
+        Department of Computer Applications<br>
+        Sikkim University, Gangtok 737102, Sikkim, India
       </p>
 
       <p>
-      I have <strong>coined</strong> the terms such as: <strong>Internet of AI Things (IoAT)</strong>, <strong>Pervasive Generative AI</strong>, and along with my colleague <strong>Pervasive 
+        My research focuses on <strong>Internet of Things</strong>, 
+        <strong>Edge Artificial Intelligence</strong>, 
+        <strong>Pervasive Generative AI</strong>, and 
+        <strong>resource-constrained machine learning systems</strong>, 
+        with emphasis on reproducible deployment in real-world environments.
+      </p>
+
+      <p>
+        I have <strong>coined</strong> the terms such as: <strong>Internet of AI Things (IoAT)</strong>, <strong>Pervasive Generative AI</strong>, and along with my colleague <strong>Pervasive 
         Biomedical Informatics</strong>.
       </p>
 
-
-      <p><strong>About Me:</strong><br>
+      <p>
+        <strong>About Me:</strong><br>
         Partha Pratim Ray is an Assistant Professor (Stage 2, Academic Level 11) in the Department of Computer Applications at Sikkim University, India. He has more than 14 years of experience in higher education, teaching, research, curriculum development, student mentoring, and academic administration. He is currently at the pre-submission stage of his Ph.D. in Computer Applications at Sikkim University, with research focused on “Enabling Large Language Model on Resource-Constrained Edge: A Multi-Faceted Approach.” He holds an M.Tech in Electronics and Communication Engineering with specialization in Embedded Systems and a B.Tech in Computer Science and Engineering, and he qualified GATE in Computer Science and Engineering.
 
-His research interests include Pervasive Generative AI, Internet of Things, Edge Computing, and Pervasive Biomedical Informatics. He is credited with conceptualizing and advancing the research paradigms of coining the Pervasive Biomedical Informatics (PBI), Internet of AI Things (IoAT), and Pervasive Generative AI, with a common focus on intelligent, context-aware, and resource-efficient computing for real-world environments.
+        His research interests include Pervasive Generative AI, Internet of Things, Edge Computing, and Pervasive Biomedical Informatics. He is credited with conceptualizing and advancing the research paradigms of coining the Pervasive Biomedical Informatics (PBI), Internet of AI Things (IoAT), and Pervasive Generative AI, with a common focus on intelligent, context-aware, and resource-efficient computing for real-world environments.
 
-Dr. Ray has an extensive scholarly record, including 128 SCI-indexed journal publications, 2 SSCI-indexed journal publications, 33 Scopus-indexed journal publications, 10 books, several book chapters, and numerous international conference papers. His research impact is reflected in 14,590+ Google Scholar citations, with an h-index of 43 and an i10-index of 87.
+        Dr. Ray has an extensive scholarly record, including 128 SCI-indexed journal publications, 2 SSCI-indexed journal publications, 33 Scopus-indexed journal publications, 10 books, several book chapters, and numerous international conference papers. His research impact is reflected in 14,590+ Google Scholar citations, with an h-index of 43 and an i10-index of 87.
 
-He has received several national and international recognitions, including inclusion among the World’s Top 2% Scientists by Stanford University from 2020 to 2025. His other recognitions include Fellow status in the Institution of Engineers in Scotland (FIES), Thinking About Thinking, and FIETE, Senior Membership of IEEE (SMIEEE) and INAE (M-INAE), the IEI Young Engineers Award, the Sikkim University Publication Award, and multiple best paper and young scientist awards.
+        He has received several national and international recognitions, including inclusion among the World’s Top 2% Scientists by Stanford University from 2020 to 2025. His other recognitions include Fellow status in the Institution of Engineers in Scotland (FIES), Thinking About Thinking, and FIETE, Senior Membership of IEEE (SMIEEE) and INAE (M-INAE), the IEI Young Engineers Award, the Sikkim University Publication Award, and multiple best paper and young scientist awards.
 
-He also contributes actively to the academic community through editorial and professional service. He serves as Editor of the IETE Journal of Education, Associate Editor of Frontiers in Communications and Networks and Frontiers in Bioinformatics, and as an Editorial Board Member of multiple EAI Endorsed Transactions. He is also associated with several professional bodies, including IEEE, INAE, IETE, IES, IET, IEI, ACM, CSI, ISOC, AAM, IMS, and others.
+        He also contributes actively to the academic community through editorial and professional service. He serves as Editor of the IETE Journal of Education, Associate Editor of Frontiers in Communications and Networks and Frontiers in Bioinformatics, and as an Editorial Board Member of multiple EAI Endorsed Transactions. He is also associated with several professional bodies, including IEEE, INAE, IETE, IES, IET, IEI, ACM, CSI, ISOC, AAM, IMS, and others.
 
-Beyond his technical research, he is committed to interdisciplinary scholarship connecting AI, IoT, edge intelligence, healthcare, biomedical informatics, intelligent systems, and societal applications of emerging technologies. He is also a strong advocate of Indian Knowledge Systems and has informally established the Indian Knowledge Forum to promote and disseminate India’s indigenous knowledge traditions in contemporary academic and public contexts.
+        Beyond his technical research, he is committed to interdisciplinary scholarship connecting AI, IoT, edge intelligence, healthcare, biomedical informatics, intelligent systems, and societal applications of emerging technologies. He is also a strong advocate of Indian Knowledge Systems and has informally established the Indian Knowledge Forum to promote and disseminate India’s indigenous knowledge traditions in contemporary academic and public contexts.
       </p>
 
       <p>
@@ -79,138 +385,120 @@ Beyond his technical research, he is committed to interdisciplinary scholarship 
     </div>
   </div>
 
-<!-- SPECIAL ISSUE HIGHLIGHT BOX -->
-<div class="highlight-box">
+  <!-- SPECIAL ISSUE HIGHLIGHT BOX -->
+  <div class="highlight-box">
 
-<p>
-  <span class="blink">NEW</span>
-  <strong>Special Issue Announcement:</strong><br>
-  <em>"Internet of AI Things (IoAT): Edge Intelligence, Autonomous Ubiquitous Systems, and Context-Aware Smart Environments"</em> — hosted in <strong>23rd EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (MobiQuitous 2026)</strong><br>
-  <strong>Status:</strong> Now open for submission<br>
-  <strong>Submission Link:</strong>
-  <a href="https://confyplus.eai.eu/app#conftrack-overview/cid/53753/tid/5236" target="_blank" rel="noopener noreferrer">
-    https://confyplus.eai.eu/app#conftrack-overview/cid/53753/tid/5236
-  </a>
-  <br><br>
-  <strong>Topic Editors:</strong><br>
-  Partha Pratim Ray, Sikkim University, India <br>
-  Shuai Li, University of Oulu, Finland
-  <br><br>
+    <p>
+      <span class="blink">NEW</span>
+      <strong>Special Issue Announcement:</strong><br>
+      <em>"Internet of AI Things (IoAT): Edge Intelligence, Autonomous Ubiquitous Systems, and Context-Aware Smart Environments"</em> — hosted in <strong>23rd EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (MobiQuitous 2026)</strong><br>
+      <strong>Status:</strong> Now open for submission<br>
+      <strong>Submission Link:</strong>
+      <a href="https://confyplus.eai.eu/app#conftrack-overview/cid/53753/tid/5236" target="_blank" rel="noopener noreferrer">
+        https://confyplus.eai.eu/app#conftrack-overview/cid/53753/tid/5236
+      </a>
+      <br><br>
+      <strong>Topic Editors:</strong><br>
+      Partha Pratim Ray, Sikkim University, India <br>
+      Shuai Li, University of Oulu, Finland
+      <br><br>
+    </p>
 
-  
-  <hr>
-  
-  
-  <p>
-  <span class="blink">NEW</span>
-  <strong>Special Issue Announcement:</strong><br>
-  <em>"Internet of AI Things (IoAT): Intelligent, Edge-Aware, and Autonomous Sensor Ecosystems - IoAT 2026"</em> — hosted in <strong>13th International Conference on Sensors, IoT and Intelligent Networks - SENSORNETS 2026</strong><br>
-  <strong>Status:</strong> Now open for submission<br>
-  <strong>Submission Link:</strong>
-  <a href="https://www.insticc.org/primoris/DirectLink.aspx?idEvent=7UOU1b5dIPI=&roleName=AKC6/t1R9Gs=&type=FNiX60z6Am0=" target="_blank" rel="noopener noreferrer">
-    https://www.insticc.org/primoris/DirectLink.aspx?idEvent=7UOU1b5dIPI=&roleName=AKC6/t1R9Gs=&type=FNiX60z6Am0=
-  </a>
-  <br><br>
-  <strong>Topic Editors:</strong><br>
-  Partha Pratim Ray, Sikkim University, India <br>
-  Shuai Li, University of Oulu, Finland
-  <br><br>
+    <hr>
 
-  
-  <hr>
-  
-  
-<p>
-  <span class="blink">NEW</span>
-  <strong>Special Issue Announcement:</strong><br>
-  <em>"Multi-Omics for Drug Response and Combination Therapy Prediction"</em> — hosted in <strong>Frontiers in Bioinformatics</strong><br>
-  <strong>Status:</strong> Now open for submission<br>
-  <strong>Submission Link:</strong>
-  <a href="https://www.frontiersin.org/research-topics/77955/multi-omics-for-drug-response-and-combination-therapy-prediction" target="_blank" rel="noopener noreferrer">
-    https://www.frontiersin.org/research-topics/77955/multi-omics-for-drug-response-and-combination-therapy-prediction
-  </a>
-  <br><br>
-  <strong>Topic Editors:</strong><br>
-  Partha Pratim Ray, Sikkim University, India <br>
-  Pu-Feng Du, Tianjin University, China<br>
-  Wei Lan, Guangxi University, Nanning, China<br>
-  Asim Bikas Das, National Institute of Technology, Warangal, India
-  <br><br>
+    <p>
+      <span class="blink">NEW</span>
+      <strong>Special Issue Announcement:</strong><br>
+      <em>"Internet of AI Things (IoAT): Intelligent, Edge-Aware, and Autonomous Sensor Ecosystems - IoAT 2026"</em> — hosted in <strong>13th International Conference on Sensors, IoT and Intelligent Networks - SENSORNETS 2026</strong><br>
+      <strong>Status:</strong> Now open for submission<br>
+      <strong>Submission Link:</strong>
+      <a href="https://www.insticc.org/primoris/DirectLink.aspx?idEvent=7UOU1b5dIPI=&roleName=AKC6/t1R9Gs=&type=FNiX60z6Am0=" target="_blank" rel="noopener noreferrer">
+        https://www.insticc.org/primoris/DirectLink.aspx?idEvent=7UOU1b5dIPI=&roleName=AKC6/t1R9Gs=&type=FNiX60z6Am0=
+      </a>
+      <br><br>
+      <strong>Topic Editors:</strong><br>
+      Partha Pratim Ray, Sikkim University, India <br>
+      Shuai Li, University of Oulu, Finland
+      <br><br>
+    </p>
 
-</p>
+    <hr>
 
+    <p>
+      <span class="blink">NEW</span>
+      <strong>Special Issue Announcement:</strong><br>
+      <em>"Multi-Omics for Drug Response and Combination Therapy Prediction"</em> — hosted in <strong>Frontiers in Bioinformatics</strong><br>
+      <strong>Status:</strong> Now open for submission<br>
+      <strong>Submission Link:</strong>
+      <a href="https://www.frontiersin.org/research-topics/77955/multi-omics-for-drug-response-and-combination-therapy-prediction" target="_blank" rel="noopener noreferrer">
+        https://www.frontiersin.org/research-topics/77955/multi-omics-for-drug-response-and-combination-therapy-prediction
+      </a>
+      <br><br>
+      <strong>Topic Editors:</strong><br>
+      Partha Pratim Ray, Sikkim University, India <br>
+      Pu-Feng Du, Tianjin University, China<br>
+      Wei Lan, Guangxi University, Nanning, China<br>
+      Asim Bikas Das, National Institute of Technology, Warangal, India
+      <br><br>
+    </p>
 
+    <hr>
 
-    
-  <hr>
+    <p>
+      <span class="blink">NEW</span>
+      <strong>Special Issue Announcement:</strong><br>
+      <em>"Pervasive Biomedical Informatics"</em> — hosted in <strong>Frontiers in Bioinformatics</strong><br>
+      <strong>Status:</strong> Now open for submission<br>
+      <strong>Submission Link:</strong>
+      <a href="https://www.frontiersin.org/research-topics/75918/pervasive-biomedical-informatics" target="_blank" rel="noopener noreferrer">
+        https://www.frontiersin.org/research-topics/75918/pervasive-biomedical-informatics
+      </a>
+      <br><br>
+      <strong>Topic Editors:</strong><br>
+      Partha Pratim Ray, Sikkim University, India <br>
+      Rahul Singh Jasrotia, The University of Texas Health Science Center at San Antonio, San Antonio, United States<br>
+      Wei Lan, Guangxi University, Nanning, China<br>
+      Lihong Peng, Hunan University of Technology, Zhuzhou, China<br>
+      Manoj Kandpal, The Rockefeller University, New York City, United States
+    </p>
 
-  
-   <p>
-    <span class="blink">NEW</span>
-    <strong>Special Issue Announcement:</strong><br>
-    <em>"Pervasive Biomedical Informatics"</em> — hosted in <strong>Frontiers in Bioinformatics</strong><br>
-    <strong>Status:</strong> Now open for submission<br>
-    <strong>Submission Link:</strong>
-    <a href="https://www.frontiersin.org/research-topics/75918/pervasive-biomedical-informatics" target="_blank" rel="noopener noreferrer">
-      https://www.frontiersin.org/research-topics/75918/pervasive-biomedical-informatics
-    </a>
-    <br><br>
-    <strong>Topic Editors:</strong><br>
-    Partha Pratim Ray, Sikkim University, India <br>
-    Rahul Singh Jasrotia, The University of Texas Health Science Center at San Antonio, San Antonio, United States<br>
-    Wei Lan, Guangxi University, Nanning, China<br>
-    Lihong Peng, Hunan University of Technology, Zhuzhou, China<br>
-    Manoj Kandpal, The Rockefeller University, New York City, United States
-  </p>
+    <hr>
 
-
-    
-  <hr>
-
-  
-  <p>
-    <span class="blink">NEW</span>
-    <strong>Special Issue Announcement:</strong><br>
-    <em>"Internet of AI Things (IoAT): Mathematical Foundations, Edge Intelligence,
+    <p>
+      <span class="blink">NEW</span>
+      <strong>Special Issue Announcement:</strong><br>
+      <em>"Internet of AI Things (IoAT): Mathematical Foundations, Edge Intelligence,
 and Computational Paradigms"</em> — hosted in <strong>International Conference on Mathematical Sciences and
 Computational Intelligence (ICMSCI-2026), February 20–22, 2026, Department of Mathematics, P.G.D.A.V. College, University of Delhi.</strong><br>
-    <strong>Status:</strong> Now open for submission<br>
-    <strong>Submission Link:</strong>
-    <a href="https://sites.google.com/pgdav.du.ac.in/icmsci-2026/special-sessions/ss-10-internet-of-ai-things-ioat" target="_blank" rel="noopener noreferrer">
-      https://sites.google.com/pgdav.du.ac.in/icmsci-2026/special-sessions/ss-10-internet-of-ai-things-ioat
-    </a>
-    <br><br>
-    <strong>Topic Editors:</strong><br>
-    Partha Pratim Ray, Sikkim University, India<br>
-  </p>
+      <strong>Status:</strong> Now open for submission<br>
+      <strong>Submission Link:</strong>
+      <a href="https://sites.google.com/pgdav.du.ac.in/icmsci-2026/special-sessions/ss-10-internet-of-ai-things-ioat" target="_blank" rel="noopener noreferrer">
+        https://sites.google.com/pgdav.du.ac.in/icmsci-2026/special-sessions/ss-10-internet-of-ai-things-ioat
+      </a>
+      <br><br>
+      <strong>Topic Editors:</strong><br>
+      Partha Pratim Ray, Sikkim University, India<br>
+    </p>
 
+    <hr>
 
-
-    
-  <hr>
-
-
-  
-  <p>
-    <span class="blink">NEW</span>
-    <strong>Special Issue Announcement:</strong><br>
-    <em>"Internet of AI Things (IoAT): Agentic Smart Computing for Human-Centric and Sustainable Intelligent Systems"</em> — hosted in <strong>International Conference on Mathematical Sciences and
+    <p>
+      <span class="blink">NEW</span>
+      <strong>Special Issue Announcement:</strong><br>
+      <em>"Internet of AI Things (IoAT): Agentic Smart Computing for Human-Centric and Sustainable Intelligent Systems"</em> — hosted in <strong>International Conference on Mathematical Sciences and
 8th International Conference on Smart Computing and Informatics (SCI-2026), , Swinburne Vietnam, Hanoi Location.</strong><br>
-    <strong>Status:</strong> Now open for submission<br>
-    <strong>Submission Link:</strong>
-    <a href="https://sciconf.co/special-sessions" target="_blank" rel="noopener noreferrer">
-      https://sciconf.co/special-sessions
-    </a>
-    <br><br>
-    <strong>Topic Editors:</strong><br>
-    Partha Pratim Ray, Sikkim University, India<br>
-  </p>
+      <strong>Status:</strong> Now open for submission<br>
+      <strong>Submission Link:</strong>
+      <a href="https://sciconf.co/special-sessions" target="_blank" rel="noopener noreferrer">
+        https://sciconf.co/special-sessions
+      </a>
+      <br><br>
+      <strong>Topic Editors:</strong><br>
+      Partha Pratim Ray, Sikkim University, India<br>
+    </p>
 
-</div>
+  </div>
 
-
-
-  
   <div class="highlight-box">
     <p>
       <span class="blink">NEW</span>
@@ -220,125 +508,118 @@ Computational Intelligence (ICMSCI-2026), February 20–22, 2026, Department of 
     </p>
   </div>
 
-<div class="highlight-box">
-  <p>
-    <span class="blink">NEW</span>
-    <strong>Publication Highlights:</strong>
-  </p>
-  <ul>
-    <li>
-      <em>"Physical AI: bridging the sim-to-real divide toward embodied, ethical, and autonomous intelligence"</em>
-      in Machine Learning for Computational Science and Engineering, Springer
-    </li>
-    <li>
-      <em>"Performance analysis of localised large language models in resource-constrained edge for Python and Rust APIs"</em>
-      in Journal of Edge Computing
-    </li>
-    <li>
-      <em>"An Evaluation Framework for Measuring Prompt Wise Metrics for Large Language Models in Resource-Constrained Edge"</em>
-      in BenchCouncil Transactions on Benchmarks, Standards and Evaluations, KeAi, Elsevier
-    </li>
-  </ul>
-</div>
+  <div class="highlight-box">
+    <p>
+      <span class="blink">NEW</span>
+      <strong>Publication Highlights:</strong>
+    </p>
+    <ul>
+      <li>
+        <em>"Physical AI: bridging the sim-to-real divide toward embodied, ethical, and autonomous intelligence"</em>
+        in Machine Learning for Computational Science and Engineering, Springer
+      </li>
+      <li>
+        <em>"Performance analysis of localised large language models in resource-constrained edge for Python and Rust APIs"</em>
+        in Journal of Edge Computing
+      </li>
+      <li>
+        <em>"An Evaluation Framework for Measuring Prompt Wise Metrics for Large Language Models in Resource-Constrained Edge"</em>
+        in BenchCouncil Transactions on Benchmarks, Standards and Evaluations, KeAi, Elsevier
+      </li>
+    </ul>
+  </div>
 
-<div class="section">
-  <h2>Recent Announcements</h2>
-
-       <div class="announcement">
-    🧠 <strong>2026</strong> — Selected as <strong>Fellow</strong> at 
-    <em>Institution of Engineers in Scotland (FIES)</em>
-    <span class="blink">NEW</span>
-</div>
-  
+  <div class="section">
+    <h2>Recent Announcements</h2>
 
     <div class="announcement">
-    📄 <strong>May 2026</strong> — Appointed as <strong>Editor</strong>, 
-    <em>IETE Journal of Education</em>, contributing to advancing 
-    interdisciplinary research in artificial intelligence, IoT, edge, robotics, and intelligent systems for education
-    <span class="blink">NEW</span>
-</div>
+      🧠 <strong>2026</strong> — Selected as <strong>Fellow</strong> at 
+      <em>Institution of Engineers in Scotland (FIES)</em>
+      <span class="blink">NEW</span>
+    </div>
 
+    <div class="announcement">
+      📄 <strong>May 2026</strong> — Appointed as <strong>Editor</strong>, 
+      <em>IETE Journal of Education</em>, contributing to advancing 
+      interdisciplinary research in artificial intelligence, IoT, edge, robotics, and intelligent systems for education
+      <span class="blink">NEW</span>
+    </div>
 
+    <div class="announcement">
+      📄 <strong>April 2026</strong> — Appointed as <strong>Editorial Board Member</strong>, 
+      <em>EAI Endorsed Transactions on AI and Robotics</em>, contributing to advancing 
+      interdisciplinary research in artificial intelligence, robotics, and intelligent systems
+      <span class="blink">NEW</span>
+    </div>
 
-  
-  <div class="announcement">
-    📄 <strong>April 2026</strong> — Appointed as <strong>Editorial Board Member</strong>, 
-    <em>EAI Endorsed Transactions on AI and Robotics</em>, contributing to advancing 
-    interdisciplinary research in artificial intelligence, robotics, and intelligent systems
-    <span class="blink">NEW</span>
-</div>
+    <div class="announcement">
+      🧠 <strong>2026</strong> — Selected as <strong>Fellow</strong> at 
+      <em>Thinking About Thinking Inc.</em>, a global intellectual community advancing 
+      research and dialogue across Artificial Intelligence, neuroscience, mathematics, 
+      and the nature of thought; contributing to interdisciplinary discourse and global initiatives 
+      including the AE Global Summit on Open Problems for AI (London, 2026)
+      <span class="blink">NEW</span>
+    </div>
 
-  
-  <div class="announcement">
-    🧠 <strong>2026</strong> — Selected as <strong>Fellow</strong> at 
-    <em>Thinking About Thinking Inc.</em>, a global intellectual community advancing 
-    research and dialogue across Artificial Intelligence, neuroscience, mathematics, 
-    and the nature of thought; contributing to interdisciplinary discourse and global initiatives 
-    including the AE Global Summit on Open Problems for AI (London, 2026)
-    <span class="blink">NEW</span>
-</div>
-  
-  <div class="announcement">
+    <div class="announcement">
       🎖️ Selected as Senior Member (Individual) of <strong>Indian National Academy of Engineering (INAE)</strong>, 2026 
       <span class="blink">NEW</span>
-  </div>
+    </div>
 
- <div class="announcement">
-     📈 Google Scholar Citations crossed <strong>14,200+</strong>, <strong>h-index: 42</strong>, <strong>i10-index: 87</strong>  <span class="blink">NEW</span>
-  </div>
+    <div class="announcement">
+      📈 Google Scholar Citations crossed <strong>14,200+</strong>, <strong>h-index: 42</strong>, <strong>i10-index: 87</strong>  <span class="blink">NEW</span>
+    </div>
 
-  <div class="announcement">
-    🎓 <strong>20 Mar 2026</strong> — Served as <strong>Session Chair</strong> at the 
-    <em>3rd International Conference on Computing Systems & Intelligent Applications (ComSIA-2026)</em>, 
-    organized by <strong>School of Open Learning, University of Delhi</strong> and 
-    <strong>Shaheed Rajguru College of Applied Sciences for Women, University of Delhi</strong>
-    <span class="blink">NEW</span>
-</div>
-  
-  <div class="announcement">
-    🎤 <strong>29 Nov 2025</strong> — Delivered an invited talk on 
-    <em>“Internet of AI Things: Enabling Generative LLMs at the Edge of Pervasive Systems”</em> 
-    at <strong>SR University, Telangana</strong>
-    <span class="blink">NEW</span>
-  </div>
+    <div class="announcement">
+      🎓 <strong>20 Mar 2026</strong> — Served as <strong>Session Chair</strong> at the 
+      <em>3rd International Conference on Computing Systems & Intelligent Applications (ComSIA-2026)</em>, 
+      organized by <strong>School of Open Learning, University of Delhi</strong> and 
+      <strong>Shaheed Rajguru College of Applied Sciences for Women, University of Delhi</strong>
+      <span class="blink">NEW</span>
+    </div>
 
-  <div class="announcement">
+    <div class="announcement">
+      🎤 <strong>29 Nov 2025</strong> — Delivered an invited talk on 
+      <em>“Internet of AI Things: Enabling Generative LLMs at the Edge of Pervasive Systems”</em> 
+      at <strong>SR University, Telangana</strong>
+      <span class="blink">NEW</span>
+    </div>
+
+    <div class="announcement">
       📄 <strong>2025</strong> — Associate Editor, <em>Frontiers in Communications and Networks</em>
       <span class="blink">NEW</span>
-  </div>
+    </div>
 
-  
-  <div class="announcement">
+    <div class="announcement">
       🎖️ Recognized as one of the <strong>World’s Top 2% Scientists</strong>, Stanford University (Career & Yearly Database), 2025
       <span class="blink">NEW</span>
-  </div>
+    </div>
 
-  <div class="announcement">
+    <div class="announcement">
       📄 Associate Editor, <em>Frontiers in Bioinformatics</em>, September 2025
       <span class="blink">NEW</span>
-  </div>
+    </div>
 
-  <div class="announcement">
+    <div class="announcement">
       🏆 Best Paper Award, <em>AICTA-2024</em>, LNNS Springer, NIT Raipur
-  </div>
+    </div>
 
-  <div class="announcement">
+    <div class="announcement">
       🎓 Elevated to <strong>Fellow, IETE</strong>, 2023
-  </div>
+    </div>
 
-  <div class="announcement">
+    <div class="announcement">
       📊 Recognized as Top-2% Scientist by Stanford University (2020–2024)
+    </div>
+
+    <div class="announcement">
+      🕉️ Founded 
+      <a href="http://linkedin.com/company/indian-knowledge-forum" target="_blank" rel="noopener noreferrer">
+        भारतीय ज्ञान मंचः (Indian Knowledge Forum)
+      </a> (2024)
+    </div>
+
   </div>
-
-
-<div class="announcement">
-    🕉️ Founded 
-    <a href="http://linkedin.com/company/indian-knowledge-forum" target="_blank" rel="noopener noreferrer">
-      भारतीय ज्ञान मंचः (Indian Knowledge Forum)
-    </a> (2024)
-</div>
-
-</div>
 
 </div>
 
@@ -349,7 +630,7 @@ Computational Intelligence (ICMSCI-2026), February 20–22, 2026, Department of 
 
   <!-- Visitor Counter -->
   <a href="https://info.flagcounter.com/ybId">
-  <img src="https://s01.flagcounter.com/count2/ybId/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
+    <img src="https://s01.flagcounter.com/count2/ybId/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
   </a>
 
 </footer>
