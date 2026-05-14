@@ -2,9 +2,245 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Awards & Recognitions | Partha Pratim Ray</title>
+
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --primary: #17324d;
+      --primary-light: #24527a;
+      --accent: #0b6bcb;
+      --accent-soft: #e8f2ff;
+      --gold: #b7791f;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --border: #d9e2ec;
+      --shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #eef4fb 0%, #f8fafc 45%, #ffffff 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    a:hover {
+      color: var(--primary-light);
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      font-size: 0.93rem;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: all 0.25s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .page-header {
+      margin: 42px 0 26px;
+      padding: 34px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .page-header h1 {
+      margin: 0 0 10px;
+      color: var(--primary);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .page-header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      margin: 30px 0 44px;
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      margin: 0 0 24px;
+      color: var(--primary);
+      font-size: 1.8rem;
+      border-bottom: 3px solid var(--accent-soft);
+      padding-bottom: 10px;
+    }
+
+    .section h3 {
+      margin: 34px 0 18px;
+      color: var(--primary);
+      font-size: 1.45rem;
+      border-left: 5px solid var(--accent);
+      padding-left: 14px;
+    }
+
+    .section h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .section ul {
+      list-style: none;
+      margin: 0 0 18px;
+      padding: 0;
+    }
+
+    .section li {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--gold);
+      border-radius: 14px;
+      padding: 15px 18px 15px 20px;
+      margin: 12px 0;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .section li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.09);
+    }
+
+    .section li::before {
+      content: "🏆";
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .section li strong {
+      color: var(--primary);
+    }
+
+    .section li em {
+      color: var(--primary-light);
+      font-weight: 600;
+    }
+
+    .section hr {
+      border: none;
+      border-top: 1px dashed var(--border);
+      margin: 34px 0;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 28px 16px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #ffffff;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 860px) {
+      nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 12px 0;
+      }
+
+      nav a {
+        white-space: nowrap;
+      }
+
+      .page-header,
+      .section {
+        padding: 24px 20px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: 94%;
+      }
+
+      .page-header {
+        margin-top: 24px;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+
+      .section h3 {
+        font-size: 1.25rem;
+      }
+
+      .section li {
+        padding: 14px 15px 14px 17px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
@@ -26,70 +262,77 @@
     </nav>
   </div>
 </header>
-  
 
-<div class="container section">
+<div class="container">
 
-<h2>Awards, Fellowships & Achievements</h2>
+  <div class="page-header">
+    <h1>Awards & Recognitions</h1>
+    <p>Awards, fellowships, global recognition, professional honors, and academic achievements</p>
+  </div>
 
-<h3>Editorial & Professional Recognition</h3>
-<ul>
-  <li>Associate Editor, <em>Frontiers in Communications and Networks</em> (since November 2025)</li>
-  <li>Associate Editor, <em>Frontiers in Bioinformatics</em> (since September 2025)</li>
-</ul>
+  <div class="section">
 
-<hr>
+    <h2>Awards, Fellowships & Achievements</h2>
 
-<h3>Global Research Recognition</h3>
-<ul>
-  <li>Recognized as one of the <strong>World’s Top 2% Scientists</strong>, Stanford University, USA (Career & Yearly Database), <strong>2025</strong></li>
-  <li>Recognized as one of the <strong>World’s Top 2% Scientists</strong>, Stanford University, USA, <strong>2024</strong></li>
-  <li>Recognized as one of the <strong>World’s Top 2% Scientists</strong>, Stanford University, USA, <strong>2023</strong></li>
-  <li>Recognized as one of the <strong>World’s Top 2% Scientists</strong>, Stanford University, USA, <strong>2022</strong></li>
-  <li>Recognized as one of the <strong>World’s Top 2% Scientists</strong>, Stanford University, USA, <strong>2021</strong></li>
-  <li>Recognized as one of the <strong>World’s Top 2% Scientists</strong>, Stanford University, USA, <strong>2020</strong></li>
-</ul>
+    <h3>Editorial & Professional Recognition</h3>
+    <ul>
+      <li>Associate Editor, <em>Frontiers in Communications and Networks</em> (since November 2025)</li>
+      <li>Associate Editor, <em>Frontiers in Bioinformatics</em> (since September 2025)</li>
+    </ul>
 
-<hr>
+    <hr>
 
+    <h3>Global Research Recognition</h3>
+    <ul>
+      <li>Recognized as one of the <strong>World’s Top 2% Scientists</strong>, Stanford University, USA (Career & Yearly Database), <strong>2025</strong></li>
+      <li>Recognized as one of the <strong>World’s Top 2% Scientists</strong>, Stanford University, USA, <strong>2024</strong></li>
+      <li>Recognized as one of the <strong>World’s Top 2% Scientists</strong>, Stanford University, USA, <strong>2023</strong></li>
+      <li>Recognized as one of the <strong>World’s Top 2% Scientists</strong>, Stanford University, USA, <strong>2022</strong></li>
+      <li>Recognized as one of the <strong>World’s Top 2% Scientists</strong>, Stanford University, USA, <strong>2021</strong></li>
+      <li>Recognized as one of the <strong>World’s Top 2% Scientists</strong>, Stanford University, USA, <strong>2020</strong></li>
+    </ul>
 
-<h3>Academic & Institutional Awards</h3>
-<ul>
-  <li>Special Award for publication in highest impact journal, Sikkim University, <strong>2025</strong></li>
-  <li>Best Paper Award, 2nd International Conference on Artificial Intelligence, Computing Technologies, Internet of Things and Data Analytics (AICTA-2024), LNNS Springer, NIT Raipur</li>
-  <li>University Publication Award, School of Physical Sciences, Sikkim University, <strong>2023</strong></li>
-  <li>Felicitated for “Top Downloaded Paper 2018–2019”, <em>Transactions on Emerging Telecommunications Technologies</em>, Wiley, <strong>2020</strong></li>
-  <li>Emerald Literati Awards 2019 — <em>Highly Commended</em>, Sensor Review</li>
-</ul>
+    <hr>
 
-<hr>
+    <h3>Academic & Institutional Awards</h3>
+    <ul>
+      <li>Special Award for publication in highest impact journal, Sikkim University, <strong>2025</strong></li>
+      <li>Best Paper Award, 2nd International Conference on Artificial Intelligence, Computing Technologies, Internet of Things and Data Analytics (AICTA-2024), LNNS Springer, NIT Raipur</li>
+      <li>University Publication Award, School of Physical Sciences, Sikkim University, <strong>2023</strong></li>
+      <li>Felicitated for “Top Downloaded Paper 2018–2019”, <em>Transactions on Emerging Telecommunications Technologies</em>, Wiley, <strong>2020</strong></li>
+      <li>Emerald Literati Awards 2019 — <em>Highly Commended</em>, Sensor Review</li>
+    </ul>
 
-<h3>Professional Elevations & Honors</h3>
-<ul>
-  <li>Elevated to <strong>Fellow, Thinking About Thinking</strong>, <strong>2026</strong></li>
-  <li>Elevated to <strong>Fellow, IETE</strong>, <strong>2023</strong></li>
-  <li>Elevated to <strong>Senior Member, IEEE</strong>, February 16, <strong>2019</strong></li>
-  <li>IEI Young Engineers Award 2019–20, Computer Engineering Division, Institution of Engineers (India)</li>
-</ul>
+    <hr>
 
-<hr>
+    <h3>Professional Elevations & Honors</h3>
+    <ul>
+      <li>Elevated to <strong>Fellow, Thinking About Thinking</strong>, <strong>2026</strong></li>
+      <li>Elevated to <strong>Fellow, IETE</strong>, <strong>2023</strong></li>
+      <li>Elevated to <strong>Senior Member, IEEE</strong>, February 16, <strong>2019</strong></li>
+      <li>IEI Young Engineers Award 2019–20, Computer Engineering Division, Institution of Engineers (India)</li>
+    </ul>
 
-<h3>National & International Recognition</h3>
-<ul>
-  <li>Invited Member, National Innovation Club Meeting, Rashtrapati Bhavan Cultural Centre, New Delhi, Festival of Innovation <strong>2017</strong></li>
-  <li>Selected for Science Academies’ Summer Research Fellowship Programme (SRFP), IAS–INSA–NAS</li>
-</ul>
+    <hr>
 
-<hr>
+    <h3>National & International Recognition</h3>
+    <ul>
+      <li>Invited Member, National Innovation Club Meeting, Rashtrapati Bhavan Cultural Centre, New Delhi, Festival of Innovation <strong>2017</strong></li>
+      <li>Selected for Science Academies’ Summer Research Fellowship Programme (SRFP), IAS–INSA–NAS</li>
+    </ul>
 
-<h3>Early Career Awards & Fellowships</h3>
-<ul>
-  <li>Young Scientist Award, Venus International Foundation, <strong>2017</strong></li>
-  <li>Bharat Vikas Award, Institute of Self Reliance, <strong>2017</strong></li>
-  <li>Best Professor in IT Academic Excellence Award, ICBM-AMP, <strong>2017</strong></li>
-  <li>Young Achiever Award, IEAE, <strong>2018</strong></li>
-  <li>Post-Graduate Scholarship, AICTE (2009–2011)</li>
-</ul>
+    <hr>
+
+    <h3>Early Career Awards & Fellowships</h3>
+    <ul>
+      <li>Young Scientist Award, Venus International Foundation, <strong>2017</strong></li>
+      <li>Bharat Vikas Award, Institute of Self Reliance, <strong>2017</strong></li>
+      <li>Best Professor in IT Academic Excellence Award, ICBM-AMP, <strong>2017</strong></li>
+      <li>Young Achiever Award, IEAE, <strong>2018</strong></li>
+      <li>Post-Graduate Scholarship, AICTE (2009–2011)</li>
+    </ul>
+
+  </div>
 
 </div>
 
