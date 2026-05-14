@@ -2,9 +2,245 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Mentorship & Thesis Supervision | Partha Pratim Ray</title>
+
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --primary: #17324d;
+      --primary-light: #24527a;
+      --accent: #0b6bcb;
+      --accent-soft: #e8f2ff;
+      --gold: #b7791f;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --border: #d9e2ec;
+      --shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #eef4fb 0%, #f8fafc 45%, #ffffff 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    a:hover {
+      color: var(--primary-light);
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      font-size: 0.93rem;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: all 0.25s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .page-header {
+      margin: 42px 0 26px;
+      padding: 34px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .page-header h1 {
+      margin: 0 0 10px;
+      color: var(--primary);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .page-header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      margin: 30px 0 44px;
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      margin: 0 0 24px;
+      color: var(--primary);
+      font-size: 1.8rem;
+      border-bottom: 3px solid var(--accent-soft);
+      padding-bottom: 10px;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+      background: #ffffff;
+    }
+
+    table {
+      width: 100%;
+      min-width: 900px;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: #ffffff;
+    }
+
+    th {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #ffffff;
+      font-weight: 700;
+      text-align: left;
+      padding: 14px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      vertical-align: top;
+    }
+
+    td {
+      padding: 13px 12px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--text);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    tr:nth-child(even) td {
+      background: #f8fbff;
+    }
+
+    tr:hover td {
+      background: var(--accent-soft);
+    }
+
+    td:first-child {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    td small {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 28px 16px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #ffffff;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 860px) {
+      nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 12px 0;
+      }
+
+      nav a {
+        white-space: nowrap;
+      }
+
+      .page-header,
+      .section {
+        padding: 24px 20px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: 94%;
+      }
+
+      .page-header {
+        margin-top: 24px;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+
+      th,
+      td {
+        padding: 11px 10px;
+        font-size: 0.92rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <!-- NAVIGATION -->
@@ -28,215 +264,224 @@
   </div>
 </header>
 
-<div class="container section">
+<div class="container">
 
-  <h2>Mentorship, Project & Thesis Supervision</h2>
+  <div class="page-header">
+    <h1>Mentorship & Thesis Supervision</h1>
+    <p>Project guidance, thesis supervision, and student research mentoring</p>
+  </div>
 
-  <table border="1" width="100%" cellspacing="0" cellpadding="8" style="table-layout: fixed;">
-    <tr>
-      <th style="width:20%;">Student</th>
-      <th style="width:50%;">Project/Thesis Topic</th>
-      <th style="width:15%;">Degree</th>
-      <th style="width:15%;">Submitted</th>
-    </tr>
+  <div class="section">
 
-    <!-- 2026 -->
-    <tr>
-      <td>Tashi Thenlay Lepcha</td>
-      <td>Development of a Low-Cost Autonomous Drone for Emergency Medical Delivery</td>
-      <td>MCA</td>
-      <td>2026, Even Semester</td>
-    </tr>
-    <tr>
-      <td>Satwik Shreshth<br><small>Co-guided by Dr. Ravi Kant Jain, CSIR-CMERI, Durgapur</small></td>
-      <td>Development and Performance Analysis of 4G-LTE Protocol-Based Communication System Onboard Vehicle for Environmental Monitoring</td>
-      <td>MCA</td>
-      <td>2026, Even Semester</td>
-    </tr>
-    <tr>
-      <td>Suveer Kumar<br><small>Co-guided by Dr. Ravi Kant Jain, CSIR-CMERI, Durgapur</small></td>
-      <td>Development of AI-Based Multi-Object Detection System</td>
-      <td>MCA</td>
-      <td>2026, Even Semester</td>
-    </tr>
+    <h2>Mentorship, Project & Thesis Supervision</h2>
 
-    <!-- 2024 -->
-    <tr>
-      <td>Mayel Lyangten Lepcha</td>
-      <td rowspan="3">Retrieval-Augmented Question Answering on Indian Constitution and Indian Penal Code</td>
-      <td>MCA</td>
-      <td rowspan="3">2024, Odd Semester</td>
-    </tr>
-    <tr><td>Pratiksha Phukon</td><td>MCA</td></tr>
-    <tr><td>Yogesh Lokhar</td><td>MCA</td></tr>
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th style="width:20%;">Student</th>
+          <th style="width:50%;">Project/Thesis Topic</th>
+          <th style="width:15%;">Degree</th>
+          <th style="width:15%;">Submitted</th>
+        </tr>
 
-    <!-- 2023 -->
-    <tr>
-      <td>Pinju Priyam Gogoi</td>
-      <td rowspan="3">Study and Implementation of MQTT Broker in IoT</td>
-      <td>MCA</td>
-      <td rowspan="3">2023, Even Semester</td>
-    </tr>
-    <tr><td>Ridhiman Bora</td><td>MCA</td></tr>
-    <tr><td>Rizuwana Sultana Hussain</td><td>MCA</td></tr>
+        <!-- 2026 -->
+        <tr>
+          <td>Tashi Thenlay Lepcha</td>
+          <td>Development of a Low-Cost Autonomous Drone for Emergency Medical Delivery</td>
+          <td>MCA</td>
+          <td>2026, Even Semester</td>
+        </tr>
+        <tr>
+          <td>Satwik Shreshth<br><small>Co-guided by Dr. Ravi Kant Jain, CSIR-CMERI, Durgapur</small></td>
+          <td>Development and Performance Analysis of 4G-LTE Protocol-Based Communication System Onboard Vehicle for Environmental Monitoring</td>
+          <td>MCA</td>
+          <td>2026, Even Semester</td>
+        </tr>
+        <tr>
+          <td>Suveer Kumar<br><small>Co-guided by Dr. Ravi Kant Jain, CSIR-CMERI, Durgapur</small></td>
+          <td>Development of AI-Based Multi-Object Detection System</td>
+          <td>MCA</td>
+          <td>2026, Even Semester</td>
+        </tr>
 
-    <tr>
-      <td>Pinju Priyam Gogoi</td>
-      <td rowspan="3">Integration of Sensor-Based Circuit for Monitoring Leaf Temperature</td>
-      <td>MCA</td>
-      <td rowspan="3">2023, Odd Semester</td>
-    </tr>
-    <tr><td>Ridhiman Bora</td><td>MCA</td></tr>
-    <tr><td>Rizuwana Sultana Hussain</td><td>MCA</td></tr>
+        <!-- 2024 -->
+        <tr>
+          <td>Mayel Lyangten Lepcha</td>
+          <td rowspan="3">Retrieval-Augmented Question Answering on Indian Constitution and Indian Penal Code</td>
+          <td>MCA</td>
+          <td rowspan="3">2024, Odd Semester</td>
+        </tr>
+        <tr><td>Pratiksha Phukon</td><td>MCA</td></tr>
+        <tr><td>Yogesh Lokhar</td><td>MCA</td></tr>
 
-    <!-- 2021 -->
-    <tr>
-      <td>Adarsh Sharma</td>
-      <td rowspan="3">Web-Based Information System for Medicinal and Aromatic Plants of Sikkim [Online COVID-19]</td>
-      <td>MCA</td>
-      <td rowspan="3">2021, Even Semester</td>
-    </tr>
-    <tr><td>Neeraj Anand</td><td>MCA</td></tr>
-    <tr><td>Nirmal Gupta</td><td>MCA</td></tr>
+        <!-- 2023 -->
+        <tr>
+          <td>Pinju Priyam Gogoi</td>
+          <td rowspan="3">Study and Implementation of MQTT Broker in IoT</td>
+          <td>MCA</td>
+          <td rowspan="3">2023, Even Semester</td>
+        </tr>
+        <tr><td>Ridhiman Bora</td><td>MCA</td></tr>
+        <tr><td>Rizuwana Sultana Hussain</td><td>MCA</td></tr>
 
-    <tr>
-      <td>Manita Rai</td>
-      <td rowspan="2">A Study of Time-Series Databases for IoT-Based Applications [Online COVID-19]</td>
-      <td>MCA</td>
-      <td rowspan="2">2021, Even Semester</td>
-    </tr>
-    <tr><td>Yojana Thapa</td><td>MCA</td></tr>
+        <tr>
+          <td>Pinju Priyam Gogoi</td>
+          <td rowspan="3">Integration of Sensor-Based Circuit for Monitoring Leaf Temperature</td>
+          <td>MCA</td>
+          <td rowspan="3">2023, Odd Semester</td>
+        </tr>
+        <tr><td>Ridhiman Bora</td><td>MCA</td></tr>
+        <tr><td>Rizuwana Sultana Hussain</td><td>MCA</td></tr>
 
-    <!-- 2020 -->
-    <tr>
-      <td>Bhaskar Jyoti Saikia<br><small>Co-supervisor: Dr. Ravi Kant Jain, CSIR-CMERI, India</small></td>
-      <td rowspan="2">Development of Web-Based Application for Pipeline Inspection Robot using IoT Platform [Online COVID-19]</td>
-      <td>MCA</td>
-      <td rowspan="2">2020, Even Semester</td>
-    </tr>
-    <tr>
-      <td>Nitant Pilmo Rai<br><small>Co-supervisor: Dr. Ravi Kant Jain, CSIR-CMERI, India</small></td>
-      <td>MCA</td>
-    </tr>
+        <!-- 2021 -->
+        <tr>
+          <td>Adarsh Sharma</td>
+          <td rowspan="3">Web-Based Information System for Medicinal and Aromatic Plants of Sikkim [Online COVID-19]</td>
+          <td>MCA</td>
+          <td rowspan="3">2021, Even Semester</td>
+        </tr>
+        <tr><td>Neeraj Anand</td><td>MCA</td></tr>
+        <tr><td>Nirmal Gupta</td><td>MCA</td></tr>
 
-    <tr>
-      <td>Bikash Gupta<br><small>Co-supervisor: Dr. Ravi Kant Jain, CSIR-CMERI, India</small></td>
-      <td rowspan="2">Smart Drip Irrigation System using IoT Platform [Online COVID-19]</td>
-      <td>MCA</td>
-      <td rowspan="2">2020, Even Semester</td>
-    </tr>
-    <tr>
-      <td>MD Mustaq Ansari<br><small>Co-supervisor: Dr. Ravi Kant Jain, CSIR-CMERI, India</small></td>
-      <td>MCA</td>
-    </tr>
+        <tr>
+          <td>Manita Rai</td>
+          <td rowspan="2">A Study of Time-Series Databases for IoT-Based Applications [Online COVID-19]</td>
+          <td>MCA</td>
+          <td rowspan="2">2021, Even Semester</td>
+        </tr>
+        <tr><td>Yojana Thapa</td><td>MCA</td></tr>
 
-    <tr>
-      <td>Bikash Gupta</td>
-      <td rowspan="2">Development of Web-Based Application for Graphical Data Visualization</td>
-      <td>MCA</td>
-      <td rowspan="2">2020, Odd Semester</td>
-    </tr>
-    <tr><td>Nitant Pilmo Rai</td><td>MCA</td></tr>
+        <!-- 2020 -->
+        <tr>
+          <td>Bhaskar Jyoti Saikia<br><small>Co-supervisor: Dr. Ravi Kant Jain, CSIR-CMERI, India</small></td>
+          <td rowspan="2">Development of Web-Based Application for Pipeline Inspection Robot using IoT Platform [Online COVID-19]</td>
+          <td>MCA</td>
+          <td rowspan="2">2020, Even Semester</td>
+        </tr>
+        <tr>
+          <td>Nitant Pilmo Rai<br><small>Co-supervisor: Dr. Ravi Kant Jain, CSIR-CMERI, India</small></td>
+          <td>MCA</td>
+        </tr>
 
-    <!-- 2019 -->
-    <tr>
-      <td>Hissey Ongmu Bhutia</td>
-      <td rowspan="3">Implementation of Embedded Web Server using Internet of Things-Based Tools</td>
-      <td>MCA</td>
-      <td rowspan="3">2019, Odd Semester</td>
-    </tr>
-    <tr><td>Jayanti Banerjee</td><td>MCA</td></tr>
-    <tr><td>MD Mustaq Ansari</td><td>MCA</td></tr>
+        <tr>
+          <td>Bikash Gupta<br><small>Co-supervisor: Dr. Ravi Kant Jain, CSIR-CMERI, India</small></td>
+          <td rowspan="2">Smart Drip Irrigation System using IoT Platform [Online COVID-19]</td>
+          <td>MCA</td>
+          <td rowspan="2">2020, Even Semester</td>
+        </tr>
+        <tr>
+          <td>MD Mustaq Ansari<br><small>Co-supervisor: Dr. Ravi Kant Jain, CSIR-CMERI, India</small></td>
+          <td>MCA</td>
+        </tr>
 
-    <tr>
-      <td>Bhumika Sharma</td>
-      <td rowspan="2">Boilerplate as a Service for IoT Edge-Based e-Healthcare Service</td>
-      <td>MCA</td>
-      <td rowspan="2">2019, Even Semester</td>
-    </tr>
-    <tr><td>Sunita Pradhan</td><td>MCA</td></tr>
+        <tr>
+          <td>Bikash Gupta</td>
+          <td rowspan="2">Development of Web-Based Application for Graphical Data Visualization</td>
+          <td>MCA</td>
+          <td rowspan="2">2020, Odd Semester</td>
+        </tr>
+        <tr><td>Nitant Pilmo Rai</td><td>MCA</td></tr>
 
-    <tr>
-      <td>Biky Chowhan</td>
-      <td rowspan="3">Implementation of Dual-Layer Private Blockchain for Secure EHR Transmission</td>
-      <td>MCA</td>
-      <td rowspan="3">2019, Even Semester</td>
-    </tr>
-    <tr><td>Keshang Sherpa</td><td>MCA</td></tr>
-    <tr><td>Abhishek Mukhia</td><td>MCA</td></tr>
+        <!-- 2019 -->
+        <tr>
+          <td>Hissey Ongmu Bhutia</td>
+          <td rowspan="3">Implementation of Embedded Web Server using Internet of Things-Based Tools</td>
+          <td>MCA</td>
+          <td rowspan="3">2019, Odd Semester</td>
+        </tr>
+        <tr><td>Jayanti Banerjee</td><td>MCA</td></tr>
+        <tr><td>MD Mustaq Ansari</td><td>MCA</td></tr>
 
-    <!-- 2018 -->
-    <tr>
-      <td>Biky Chowhan</td>
-      <td rowspan="2">Implementation of Decentralized Autonomous Network using Blockchain</td>
-      <td>MCA</td>
-      <td rowspan="2">2018, Odd Semester</td>
-    </tr>
-    <tr><td>Keshang Sherpa</td><td>MCA</td></tr>
+        <tr>
+          <td>Bhumika Sharma</td>
+          <td rowspan="2">Boilerplate as a Service for IoT Edge-Based e-Healthcare Service</td>
+          <td>MCA</td>
+          <td rowspan="2">2019, Even Semester</td>
+        </tr>
+        <tr><td>Sunita Pradhan</td><td>MCA</td></tr>
 
-    <tr>
-      <td>Robin Gurung</td>
-      <td rowspan="2">A Case Study on Star Rating Algorithms</td>
-      <td>MCA</td>
-      <td rowspan="2">2018, Odd Semester</td>
-    </tr>
-    <tr><td>Ashish Pradhan</td><td>MCA</td></tr>
+        <tr>
+          <td>Biky Chowhan</td>
+          <td rowspan="3">Implementation of Dual-Layer Private Blockchain for Secure EHR Transmission</td>
+          <td>MCA</td>
+          <td rowspan="3">2019, Even Semester</td>
+        </tr>
+        <tr><td>Keshang Sherpa</td><td>MCA</td></tr>
+        <tr><td>Abhishek Mukhia</td><td>MCA</td></tr>
 
-    <tr>
-      <td>Arun Subba</td>
-      <td rowspan="2">Development of Edgenet-Enabled Edge Computing System for IoT-Based Scenarios</td>
-      <td>MCA</td>
-      <td rowspan="2">2018, Even Semester</td>
-    </tr>
-    <tr><td>Kiran Regmi</td><td>MCA</td></tr>
+        <!-- 2018 -->
+        <tr>
+          <td>Biky Chowhan</td>
+          <td rowspan="2">Implementation of Decentralized Autonomous Network using Blockchain</td>
+          <td>MCA</td>
+          <td rowspan="2">2018, Odd Semester</td>
+        </tr>
+        <tr><td>Keshang Sherpa</td><td>MCA</td></tr>
 
-    <tr>
-      <td>Nishant Thapa</td>
-      <td>Design and Development of IoT-Based Interoperable Gateway</td>
-      <td>MCA</td>
-      <td>2018, Even Semester</td>
-    </tr>
+        <tr>
+          <td>Robin Gurung</td>
+          <td rowspan="2">A Case Study on Star Rating Algorithms</td>
+          <td>MCA</td>
+          <td rowspan="2">2018, Odd Semester</td>
+        </tr>
+        <tr><td>Ashish Pradhan</td><td>MCA</td></tr>
 
-    <!-- 2017 -->
-    <tr>
-      <td>Shubham Pradhan</td>
-      <td rowspan="3">Design and Development of Wearable Galvanic Skin Response Systems</td>
-      <td>BCA-MCA Integrated</td>
-      <td rowspan="3">2017, Even Semester</td>
-    </tr>
-    <tr><td>Roshan Kumar Sharma</td><td>BCA-MCA Integrated</td></tr>
-    <tr><td>Animesh Chettri</td><td>BCA-MCA Integrated</td></tr>
+        <tr>
+          <td>Arun Subba</td>
+          <td rowspan="2">Development of Edgenet-Enabled Edge Computing System for IoT-Based Scenarios</td>
+          <td>MCA</td>
+          <td rowspan="2">2018, Even Semester</td>
+        </tr>
+        <tr><td>Kiran Regmi</td><td>MCA</td></tr>
 
-    <tr>
-      <td>Nishant Thapa</td>
-      <td>Intravenous Bag Fluid Measurement System</td>
-      <td>MCA</td>
-      <td>2017, Odd Semester</td>
-    </tr>
+        <tr>
+          <td>Nishant Thapa</td>
+          <td>Design and Development of IoT-Based Interoperable Gateway</td>
+          <td>MCA</td>
+          <td>2018, Even Semester</td>
+        </tr>
 
-    <!-- 2016 -->
-    <tr>
-      <td>Nishant Thapa<br><small>Co-guided by Lekhika Chettri</small></td>
-      <td>Design and Development of Cloud-Enabled Internet of Robotic Things (IoR)</td>
-      <td>BCA-MCA Integrated</td>
-      <td>2016, Even Semester</td>
-    </tr>
+        <!-- 2017 -->
+        <tr>
+          <td>Shubham Pradhan</td>
+          <td rowspan="3">Design and Development of Wearable Galvanic Skin Response Systems</td>
+          <td>BCA-MCA Integrated</td>
+          <td rowspan="3">2017, Even Semester</td>
+        </tr>
+        <tr><td>Roshan Kumar Sharma</td><td>BCA-MCA Integrated</td></tr>
+        <tr><td>Animesh Chettri</td><td>BCA-MCA Integrated</td></tr>
 
-    <!-- 2015 -->
-    <tr>
-      <td>Ashish Sharma</td>
-      <td rowspan="2">Prep Your Self Quiz: An Android-Based Application</td>
-      <td>BCA-MCA Integrated</td>
-      <td rowspan="2">2015, Even Semester</td>
-    </tr>
-    <tr><td>Kiran Regmi</td><td>BCA-MCA Integrated</td></tr>
+        <tr>
+          <td>Nishant Thapa</td>
+          <td>Intravenous Bag Fluid Measurement System</td>
+          <td>MCA</td>
+          <td>2017, Odd Semester</td>
+        </tr>
 
-  </table>
+        <!-- 2016 -->
+        <tr>
+          <td>Nishant Thapa<br><small>Co-guided by Lekhika Chettri</small></td>
+          <td>Design and Development of Cloud-Enabled Internet of Robotic Things (IoR)</td>
+          <td>BCA-MCA Integrated</td>
+          <td>2016, Even Semester</td>
+        </tr>
+
+        <!-- 2015 -->
+        <tr>
+          <td>Ashish Sharma</td>
+          <td rowspan="2">Prep Your Self Quiz: An Android-Based Application</td>
+          <td>BCA-MCA Integrated</td>
+          <td rowspan="2">2015, Even Semester</td>
+        </tr>
+        <tr><td>Kiran Regmi</td><td>BCA-MCA Integrated</td></tr>
+
+      </table>
+    </div>
+
+  </div>
 
 </div>
-  
 
-</div>
 <footer>
   © Partha Pratim Ray | Hosted on GitHub Pages
 </footer>
